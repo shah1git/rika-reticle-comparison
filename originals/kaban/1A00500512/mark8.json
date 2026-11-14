@@ -1,0 +1,189 @@
+{
+  "format": "rika-reticle-v1",
+  "id": "mark8",
+  "name": "Марка 7 (1A00500512)",
+  "anchor_px": {
+    "x": 0.5,
+    "y": 0.5
+  },
+  "rika_source": "authored",
+  "elements": [
+    {
+      "type": "line_px",
+      "x1": -10,
+      "y1": 0,
+      "x2": 10,
+      "y2": 0,
+      "w_px": 1
+    },
+    {
+      "type": "line_px",
+      "x1": 0,
+      "y1": -10,
+      "x2": 0,
+      "y2": 10,
+      "w_px": 1
+    },
+    {
+      "type": "line_px",
+      "x1": -4,
+      "y1": -0.25,
+      "x2": -4,
+      "y2": 0.25,
+      "w_px": 1
+    },
+    {
+      "type": "line_px",
+      "x1": -3,
+      "y1": -0.25,
+      "x2": -3,
+      "y2": 0.25,
+      "w_px": 1
+    },
+    {
+      "type": "line_px",
+      "x1": -2,
+      "y1": -0.25,
+      "x2": -2,
+      "y2": 0.25,
+      "w_px": 1
+    },
+    {
+      "type": "line_px",
+      "x1": -1,
+      "y1": -0.25,
+      "x2": -1,
+      "y2": 0.25,
+      "w_px": 1
+    },
+    {
+      "type": "line_px",
+      "x1": 1,
+      "y1": -0.25,
+      "x2": 1,
+      "y2": 0.25,
+      "w_px": 1
+    },
+    {
+      "type": "line_px",
+      "x1": 2,
+      "y1": -0.25,
+      "x2": 2,
+      "y2": 0.25,
+      "w_px": 1
+    },
+    {
+      "type": "line_px",
+      "x1": 3,
+      "y1": -0.25,
+      "x2": 3,
+      "y2": 0.25,
+      "w_px": 1
+    },
+    {
+      "type": "line_px",
+      "x1": 4,
+      "y1": -0.25,
+      "x2": 4,
+      "y2": 0.25,
+      "w_px": 1
+    },
+    {
+      "type": "line_px",
+      "x1": -0.25,
+      "y1": -4,
+      "x2": 0.25,
+      "y2": -4,
+      "w_px": 1
+    },
+    {
+      "type": "line_px",
+      "x1": -0.25,
+      "y1": -3,
+      "x2": 0.25,
+      "y2": -3,
+      "w_px": 1
+    },
+    {
+      "type": "line_px",
+      "x1": -0.25,
+      "y1": -2,
+      "x2": 0.25,
+      "y2": -2,
+      "w_px": 1
+    },
+    {
+      "type": "line_px",
+      "x1": -0.25,
+      "y1": -1,
+      "x2": 0.25,
+      "y2": -1,
+      "w_px": 1
+    },
+    {
+      "type": "line_px",
+      "x1": -0.25,
+      "y1": 1,
+      "x2": 0.25,
+      "y2": 1,
+      "w_px": 1
+    },
+    {
+      "type": "line_px",
+      "x1": -0.25,
+      "y1": 2,
+      "x2": 0.25,
+      "y2": 2,
+      "w_px": 1
+    },
+    {
+      "type": "line_px",
+      "x1": -0.25,
+      "y1": 3,
+      "x2": 0.25,
+      "y2": 3,
+      "w_px": 1
+    },
+    {
+      "type": "line_px",
+      "x1": -0.25,
+      "y1": 4,
+      "x2": 0.25,
+      "y2": 4,
+      "w_px": 1
+    },
+    {
+      "type": "line_px",
+      "x1": -10,
+      "y1": 0,
+      "x2": -5,
+      "y2": 0,
+      "w_px": 3
+    },
+    {
+      "type": "line_px",
+      "x1": 5,
+      "y1": 0,
+      "x2": 10,
+      "y2": 0,
+      "w_px": 3
+    },
+    {
+      "type": "line_px",
+      "x1": 0,
+      "y1": -10,
+      "x2": 0,
+      "y2": -5,
+      "w_px": 3
+    },
+    {
+      "type": "line_px",
+      "x1": 0,
+      "y1": 5,
+      "x2": 0,
+      "y2": 10,
+      "w_px": 3
+    }
+  ],
+  "geometry_source": "owner's drawing of 07.10.2026 and the owner's decisions of the same day: a solid thin cross; transverse ticks 0.5 mil long (+-0.25) at 1, 2, 3 and 4 mil on all four arms; thick posts from 5 to 10 mil on all four sides; thin lines and ticks 2 px on Moskit and 1 px on Kaban, posts 4 px on Moskit and 3 px on Kaban; no centre gap, no centre dot, no labels. The thin axes run on under the posts to +-10 mil, so the joint at 5 mil has no break."
+}

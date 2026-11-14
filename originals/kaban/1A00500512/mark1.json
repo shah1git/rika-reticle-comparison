@@ -1,0 +1,83 @@
+{
+  "format": "rika-reticle-v1",
+  "id": "mark1",
+  "name": "Марка 1 (1A00500512)",
+  "anchor_px": {
+    "x": 0.5,
+    "y": 0.5
+  },
+  "source_sha256": "58ddd14b4f4606d156bf2c190a17a788588bf58bcfaccfedf2427e26b2a9cd8d",
+  "elements": [
+    {
+      "type": "line_px",
+      "x1": 0,
+      "y1": -9.0,
+      "x2": 0,
+      "y2": -6,
+      "w_px": 3
+    },
+    {
+      "type": "line_px",
+      "x1": -9.0,
+      "y1": 0,
+      "x2": -6,
+      "y2": 0,
+      "w_px": 3
+    },
+    {
+      "type": "line_px",
+      "x1": 6,
+      "y1": 0,
+      "x2": 9.0,
+      "y2": 0,
+      "w_px": 3
+    },
+    {
+      "type": "line_px",
+      "x1": 0,
+      "y1": 6,
+      "x2": 0,
+      "y2": 9.0,
+      "w_px": 3
+    },
+    {
+      "type": "line_px",
+      "x1": 0,
+      "y1": -9.0,
+      "x2": 0,
+      "y2": -1.0,
+      "w_px": 1
+    },
+    {
+      "type": "line_px",
+      "x1": -9.0,
+      "y1": 0,
+      "x2": -1.0,
+      "y2": 0,
+      "w_px": 1
+    },
+    {
+      "type": "line_px",
+      "x1": 1.0,
+      "y1": 0,
+      "x2": 9.0,
+      "y2": 0,
+      "w_px": 1
+    },
+    {
+      "type": "line_px",
+      "x1": 0,
+      "y1": 1.0,
+      "x2": 0,
+      "y2": 9.0,
+      "w_px": 1
+    },
+    {
+      "type": "dot_px",
+      "x": 0,
+      "y": 0,
+      "d_px": 1
+    }
+  ],
+  "geometry_source": "nominal sizes of the vendor graduation test case IR-RN-KM-20260904-02 (thread IR-107, column 理论 mil): ladders in whole mil, stroke half-lengths on the 0.25 mil grid. The vendor sprites and their extraction are a tolerance cross-check, not the source of a coordinate."
+}

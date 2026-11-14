@@ -1,0 +1,1041 @@
+{
+  "model": "RIX DBH D6",
+  "type": 8,
+  "source_ui_sha256": "1ccd21a3a4bfb94c11e4652baa138712e41c806d169802de82a4a575acebf3aa",
+  "source_elf_sha256": "356c19d035cee594f932eddf697da767fcd7a0ac3bb5e2753a01543db75591b8",
+  "zoom": 1,
+  "method": "Decoded AWTK reticle widget subtree; original ARM64 on_RX_All_Reticle_zoom and its stock callbacks executed in Unicorn until the separate range-marker path. Widget geometry/style calls captured. Parent visibility ignored to show the selected type. Color normalized to white by gallery renderer. No firmware startup or hardware code.",
+  "widget": {
+    "type": "view",
+    "rect": [
+      0,
+      0,
+      1680,
+      1680
+    ],
+    "props": {
+      "name": "view_reticle_shoot7",
+      "visible": "true",
+      "style:normal:border_width": "0",
+      "floating": "false",
+      "opacity": "255"
+    },
+    "children": [
+      {
+        "type": "view",
+        "rect": [
+          680,
+          838,
+          80,
+          4
+        ],
+        "props": {
+          "name": "view_reticle7_w_1",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          760,
+          839,
+          70,
+          2
+        ],
+        "props": {
+          "name": "view_reticle7_w_2",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          920,
+          838,
+          80,
+          4
+        ],
+        "props": {
+          "name": "view_reticle7_w_3",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          830,
+          849,
+          20,
+          2
+        ],
+        "props": {
+          "name": "view_reticle7_w_4",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          820,
+          859,
+          40,
+          2
+        ],
+        "props": {
+          "name": "view_reticle7_w_5",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          810,
+          869,
+          60,
+          2
+        ],
+        "props": {
+          "name": "view_reticle7_w_6",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          830,
+          879,
+          20,
+          2
+        ],
+        "props": {
+          "name": "view_reticle7_w_7",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          790,
+          889,
+          100,
+          2
+        ],
+        "props": {
+          "name": "view_reticle7_w_8",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          830,
+          899,
+          20,
+          2
+        ],
+        "props": {
+          "name": "view_reticle7_w_9",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          770,
+          909,
+          140,
+          2
+        ],
+        "props": {
+          "name": "view_reticle7_w_10",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          834,
+          839,
+          12,
+          2
+        ],
+        "props": {
+          "name": "view_reticle7_w_11",
+          "style:normal:bg_color": "#000000",
+          "visible": "false"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          850,
+          839,
+          70,
+          2
+        ],
+        "props": {
+          "name": "view_reticle7_w_12",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          839,
+          839,
+          2,
+          2
+        ],
+        "props": {
+          "name": "view_reticle7_h_1",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          839,
+          849,
+          2,
+          150
+        ],
+        "props": {
+          "name": "view_reticle7_h_2",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          819,
+          866,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle7_h_3",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          829,
+          868,
+          4,
+          4
+        ],
+        "props": {
+          "name": "view_reticle7_h_4",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          849,
+          868,
+          4,
+          4
+        ],
+        "props": {
+          "name": "view_reticle7_h_5",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          859,
+          866,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle7_h_6",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          799,
+          886,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle7_h_7",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          809,
+          888,
+          4,
+          4
+        ],
+        "props": {
+          "name": "view_reticle7_h_8",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          819,
+          886,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle7_h_9",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          829,
+          888,
+          4,
+          4
+        ],
+        "props": {
+          "name": "view_reticle7_h_10",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          849,
+          888,
+          4,
+          4
+        ],
+        "props": {
+          "name": "view_reticle7_h_11",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          859,
+          886,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle7_h_12",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          869,
+          888,
+          4,
+          4
+        ],
+        "props": {
+          "name": "view_reticle7_h_13",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          879,
+          886,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle7_h_14",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          779,
+          906,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle7_h_15",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          789,
+          908,
+          4,
+          4
+        ],
+        "props": {
+          "name": "view_reticle7_h_16",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          799,
+          906,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle7_h_17",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          809,
+          908,
+          4,
+          4
+        ],
+        "props": {
+          "name": "view_reticle7_h_18",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          819,
+          906,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle7_h_19",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          829,
+          908,
+          4,
+          4
+        ],
+        "props": {
+          "name": "view_reticle7_h_20",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          849,
+          908,
+          4,
+          4
+        ],
+        "props": {
+          "name": "view_reticle7_h_21",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          859,
+          906,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle7_h_22",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          869,
+          908,
+          4,
+          4
+        ],
+        "props": {
+          "name": "view_reticle7_h_23",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          879,
+          906,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle7_h_24",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          889,
+          908,
+          4,
+          4
+        ],
+        "props": {
+          "name": "view_reticle7_h_25",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          899,
+          906,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle7_h_26",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "label",
+        "rect": [
+          855,
+          840,
+          160,
+          200
+        ],
+        "props": {
+          "name": "label_reticle7_1",
+          "style:normal:font_size": "20",
+          "style:normal:text_align_h": "left",
+          "style:normal:text_align_v": "top",
+          "style:normal:text_color": "#000000",
+          "text": "1"
+        },
+        "children": []
+      },
+      {
+        "type": "label",
+        "rect": [
+          875,
+          860,
+          160,
+          200
+        ],
+        "props": {
+          "name": "label_reticle7_2",
+          "style:normal:font_size": "20",
+          "style:normal:text_align_h": "left",
+          "style:normal:text_align_v": "top",
+          "style:normal:text_color": "#000000",
+          "text": "3"
+        },
+        "children": []
+      },
+      {
+        "type": "label",
+        "rect": [
+          895,
+          880,
+          160,
+          200
+        ],
+        "props": {
+          "name": "label_reticle7_3",
+          "style:normal:font_size": "20",
+          "style:normal:text_align_h": "left",
+          "style:normal:text_align_v": "top",
+          "style:normal:text_color": "#000000",
+          "text": "5"
+        },
+        "children": []
+      },
+      {
+        "type": "label",
+        "rect": [
+          915,
+          900,
+          160,
+          200
+        ],
+        "props": {
+          "name": "label_reticle7_4",
+          "style:normal:font_size": "20",
+          "style:normal:text_align_h": "left",
+          "style:normal:text_align_v": "top",
+          "style:normal:text_color": "#000000",
+          "text": "7"
+        },
+        "children": []
+      }
+    ]
+  },
+  "trace": [
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_w_1",
+      "values": [
+        680,
+        838,
+        80,
+        4
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_w_2",
+      "values": [
+        760,
+        839,
+        70,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_w_12",
+      "values": [
+        850,
+        839,
+        70,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_w_3",
+      "values": [
+        920,
+        838,
+        80,
+        4
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_w_4",
+      "values": [
+        830,
+        849,
+        20,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_w_5",
+      "values": [
+        820,
+        859,
+        40,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_w_6",
+      "values": [
+        810,
+        869,
+        60,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_w_7",
+      "values": [
+        830,
+        879,
+        20,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_w_8",
+      "values": [
+        790,
+        889,
+        100,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_w_9",
+      "values": [
+        830,
+        899,
+        20,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_w_10",
+      "values": [
+        770,
+        909,
+        140,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_h_2",
+      "values": [
+        839,
+        849,
+        2,
+        150
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_h_3",
+      "values": [
+        819,
+        866,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move",
+      "widget": "view_reticle7_h_4",
+      "values": [
+        829,
+        868
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move",
+      "widget": "view_reticle7_h_5",
+      "values": [
+        849,
+        868
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_h_6",
+      "values": [
+        859,
+        866,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_h_7",
+      "values": [
+        799,
+        886,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move",
+      "widget": "view_reticle7_h_8",
+      "values": [
+        809,
+        888
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_h_9",
+      "values": [
+        819,
+        886,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move",
+      "widget": "view_reticle7_h_10",
+      "values": [
+        829,
+        888
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move",
+      "widget": "view_reticle7_h_11",
+      "values": [
+        849,
+        888
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_h_12",
+      "values": [
+        859,
+        886,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move",
+      "widget": "view_reticle7_h_13",
+      "values": [
+        869,
+        888
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_h_14",
+      "values": [
+        879,
+        886,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_h_15",
+      "values": [
+        779,
+        906,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move",
+      "widget": "view_reticle7_h_16",
+      "values": [
+        789,
+        908
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_h_17",
+      "values": [
+        799,
+        906,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move",
+      "widget": "view_reticle7_h_18",
+      "values": [
+        809,
+        908
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_h_19",
+      "values": [
+        819,
+        906,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move",
+      "widget": "view_reticle7_h_20",
+      "values": [
+        829,
+        908
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move",
+      "widget": "view_reticle7_h_21",
+      "values": [
+        849,
+        908
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_h_22",
+      "values": [
+        859,
+        906,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move",
+      "widget": "view_reticle7_h_23",
+      "values": [
+        869,
+        908
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_h_24",
+      "values": [
+        879,
+        906,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move",
+      "widget": "view_reticle7_h_25",
+      "values": [
+        889,
+        908
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle7_h_26",
+      "values": [
+        899,
+        906,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move",
+      "widget": "label_reticle7_1",
+      "values": [
+        855,
+        840
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move",
+      "widget": "label_reticle7_2",
+      "values": [
+        875,
+        860
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move",
+      "widget": "label_reticle7_3",
+      "values": [
+        895,
+        880
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move",
+      "widget": "label_reticle7_4",
+      "values": [
+        915,
+        900
+      ]
+    }
+  ]
+}

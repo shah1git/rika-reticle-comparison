@@ -1,0 +1,97 @@
+{
+  "reticle_internal_type": 0,
+  "palette_selector": 4,
+  "inputs": {
+    "0x154": 0,
+    "0x1f0": 0,
+    "0x1fc": 0,
+    "0x25c": 4,
+    "0x2bc": 5,
+    "0x440": 3,
+    "0x458": 1.0,
+    "0x33c8": 640.0,
+    "0x33cc": 640.0
+  },
+  "bridge_calls": {
+    "pen_new": 1,
+    "context": 1,
+    "strncasecmp": 1,
+    "pen_width": 1,
+    "color_new": 1,
+    "pen_setcolor": 2,
+    "pen_color": 1,
+    "color_alpha": 1,
+    "set_pen": 1,
+    "lines": 2,
+    "pen_delete": 1
+  },
+  "executed_blocks": [
+    "0x4498d8",
+    "0x449920",
+    "0x449938",
+    "0x449958",
+    "0x449964",
+    "0x449990",
+    "0x449a28",
+    "0x449a34",
+    "0x449a38",
+    "0x449a40",
+    "0x449a48",
+    "0x449a50",
+    "0x44cdfc",
+    "0x449ab8",
+    "0x449ac0",
+    "0x449acc",
+    "0x449ad8",
+    "0x449b04",
+    "0x449b1c",
+    "0x449b28",
+    "0x449b34",
+    "0x449b40",
+    "0x449b50",
+    "0x449b74",
+    "0x449b98",
+    "0x4499ec",
+    "0x4499f4"
+  ],
+  "primitives": [
+    {
+      "call": "lines",
+      "call_site": "0x449b70",
+      "width": 1,
+      "rgba": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "lines": [
+        [
+          636,
+          640,
+          644,
+          640
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x449b94",
+      "width": 1,
+      "rgba": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "lines": [
+        [
+          640,
+          636,
+          640,
+          644
+        ]
+      ]
+    }
+  ]
+}

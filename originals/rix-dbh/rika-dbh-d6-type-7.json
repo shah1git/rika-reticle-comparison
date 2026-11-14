@@ -1,0 +1,887 @@
+{
+  "model": "RIX DBH D6",
+  "type": 7,
+  "source_ui_sha256": "1ccd21a3a4bfb94c11e4652baa138712e41c806d169802de82a4a575acebf3aa",
+  "source_elf_sha256": "356c19d035cee594f932eddf697da767fcd7a0ac3bb5e2753a01543db75591b8",
+  "zoom": 1,
+  "method": "Decoded AWTK reticle widget subtree; original ARM64 on_RX_All_Reticle_zoom and its stock callbacks executed in Unicorn until the separate range-marker path. Widget geometry/style calls captured. Parent visibility ignored to show the selected type. Color normalized to white by gallery renderer. No firmware startup or hardware code.",
+  "widget": {
+    "type": "view",
+    "rect": [
+      0,
+      0,
+      1680,
+      1680
+    ],
+    "props": {
+      "name": "view_reticle_shoot6",
+      "visible": "true",
+      "style:normal:border_width": "0",
+      "floating": "false",
+      "opacity": "255"
+    },
+    "children": [
+      {
+        "type": "view",
+        "rect": [
+          690,
+          839,
+          130,
+          2
+        ],
+        "props": {
+          "name": "view_reticle6_w_1",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          730,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle6_w_2",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          740,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle6_w_3",
+          "style:normal:bg_color": "#000000",
+          "visible": "false"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          750,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle6_w_4",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          760,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle6_w_5",
+          "style:normal:bg_color": "#000000",
+          "visible": "false"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          770,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle6_w_6",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          780,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle6_w_7",
+          "style:normal:bg_color": "#000000",
+          "visible": "false"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          790,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle6_w_8",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          800,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle6_w_9",
+          "style:normal:bg_color": "#000000",
+          "visible": "false"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          810,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle6_w_10",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          860,
+          839,
+          130,
+          2
+        ],
+        "props": {
+          "name": "view_reticle6_w_11",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          870,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle6_w_12",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          880,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle6_w_13",
+          "style:normal:bg_color": "#000000",
+          "visible": "false"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          890,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle6_w_14",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          900,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle6_w_15",
+          "style:normal:bg_color": "#000000",
+          "visible": "false"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          910,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle6_w_16",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          920,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle6_w_17",
+          "style:normal:bg_color": "#000000",
+          "visible": "false"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          930,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle6_w_18",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          940,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle6_w_19",
+          "style:normal:bg_color": "#000000",
+          "visible": "false"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          950,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle6_w_20",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          839,
+          850,
+          2,
+          160
+        ],
+        "props": {
+          "name": "view_reticle6_h_1",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          820,
+          860,
+          40,
+          2
+        ],
+        "props": {
+          "name": "view_reticle6_h_2",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          832,
+          880,
+          16,
+          2
+        ],
+        "props": {
+          "name": "view_reticle6_h_3",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          832,
+          900,
+          16,
+          2
+        ],
+        "props": {
+          "name": "view_reticle6_h_4",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          836,
+          920,
+          8,
+          2
+        ],
+        "props": {
+          "name": "view_reticle6_h_5",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          836,
+          940,
+          8,
+          2
+        ],
+        "props": {
+          "name": "view_reticle6_h_6",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          836,
+          960,
+          8,
+          2
+        ],
+        "props": {
+          "name": "view_reticle6_h_7",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "label",
+        "rect": [
+          865,
+          850,
+          160,
+          200
+        ],
+        "props": {
+          "name": "label_reticle6_2",
+          "style:normal:text_align_h": "left",
+          "style:normal:text_align_v": "top",
+          "style:normal:font_size": "20",
+          "style:normal:text_color": "#000000",
+          "text": "2"
+        },
+        "children": []
+      },
+      {
+        "type": "label",
+        "rect": [
+          865,
+          870,
+          160,
+          200
+        ],
+        "props": {
+          "name": "label_reticle6_4",
+          "style:normal:font_size": "20",
+          "style:normal:text_align_h": "left",
+          "style:normal:text_align_v": "top",
+          "style:normal:text_color": "#000000",
+          "text": "4"
+        },
+        "children": []
+      },
+      {
+        "type": "label",
+        "rect": [
+          865,
+          890,
+          160,
+          200
+        ],
+        "props": {
+          "name": "label_reticle6_6",
+          "style:normal:font_size": "20",
+          "style:normal:text_align_h": "left",
+          "style:normal:text_align_v": "top",
+          "style:normal:text_color": "#000000",
+          "text": "6"
+        },
+        "children": []
+      },
+      {
+        "type": "label",
+        "rect": [
+          865,
+          910,
+          160,
+          200
+        ],
+        "props": {
+          "name": "label_reticle6_8",
+          "style:normal:font_size": "20",
+          "style:normal:text_align_h": "left",
+          "style:normal:text_align_v": "top",
+          "style:normal:text_color": "#000000",
+          "text": "8"
+        },
+        "children": []
+      },
+      {
+        "type": "label",
+        "rect": [
+          865,
+          930,
+          160,
+          200
+        ],
+        "props": {
+          "name": "label_reticle6_10",
+          "style:normal:font_size": "20",
+          "style:normal:text_align_h": "left",
+          "style:normal:text_align_v": "top",
+          "style:normal:text_color": "#000000",
+          "text": "10"
+        },
+        "children": []
+      },
+      {
+        "type": "label",
+        "rect": [
+          865,
+          950,
+          160,
+          200
+        ],
+        "props": {
+          "name": "label_reticle6_12",
+          "style:normal:font_size": "20",
+          "style:normal:text_align_h": "left",
+          "style:normal:text_align_v": "top",
+          "style:normal:text_color": "#000000",
+          "text": "12"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          839,
+          839,
+          2,
+          2
+        ],
+        "props": {
+          "name": "view_reticle6_wh_1",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      }
+    ]
+  },
+  "trace": [
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_w_1",
+      "values": [
+        690,
+        839,
+        130,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_w_2",
+      "values": [
+        730,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_w_3",
+      "values": [
+        740,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_w_4",
+      "values": [
+        750,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_w_5",
+      "values": [
+        760,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_w_6",
+      "values": [
+        770,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_w_7",
+      "values": [
+        780,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_w_8",
+      "values": [
+        790,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_w_9",
+      "values": [
+        800,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_w_10",
+      "values": [
+        810,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_w_11",
+      "values": [
+        860,
+        839,
+        130,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_w_12",
+      "values": [
+        870,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_w_13",
+      "values": [
+        880,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_w_14",
+      "values": [
+        890,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_w_15",
+      "values": [
+        900,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_w_16",
+      "values": [
+        910,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_w_17",
+      "values": [
+        920,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_w_18",
+      "values": [
+        930,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_w_19",
+      "values": [
+        940,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_w_20",
+      "values": [
+        950,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_h_1",
+      "values": [
+        839,
+        850,
+        2,
+        160
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_h_2",
+      "values": [
+        820,
+        860,
+        40,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_h_3",
+      "values": [
+        832,
+        880,
+        16,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_h_4",
+      "values": [
+        832,
+        900,
+        16,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_h_5",
+      "values": [
+        836,
+        920,
+        8,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_h_6",
+      "values": [
+        836,
+        940,
+        8,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle6_h_7",
+      "values": [
+        836,
+        960,
+        8,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move",
+      "widget": "label_reticle6_2",
+      "values": [
+        865,
+        850
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move",
+      "widget": "label_reticle6_4",
+      "values": [
+        865,
+        870
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move",
+      "widget": "label_reticle6_6",
+      "values": [
+        865,
+        890
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move",
+      "widget": "label_reticle6_8",
+      "values": [
+        865,
+        910
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move",
+      "widget": "label_reticle6_10",
+      "values": [
+        865,
+        930
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move",
+      "widget": "label_reticle6_12",
+      "values": [
+        865,
+        950
+      ]
+    }
+  ]
+}

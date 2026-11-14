@@ -1,0 +1,182 @@
+{
+  "model": "RIX DBH D6",
+  "type": 3,
+  "source_ui_sha256": "1ccd21a3a4bfb94c11e4652baa138712e41c806d169802de82a4a575acebf3aa",
+  "source_elf_sha256": "356c19d035cee594f932eddf697da767fcd7a0ac3bb5e2753a01543db75591b8",
+  "zoom": 1,
+  "method": "Decoded AWTK reticle widget subtree; original ARM64 on_RX_All_Reticle_zoom and its stock callbacks executed in Unicorn until the separate range-marker path. Widget geometry/style calls captured. Parent visibility ignored to show the selected type. Color normalized to white by gallery renderer. No firmware startup or hardware code.",
+  "widget": {
+    "type": "view",
+    "rect": [
+      0,
+      0,
+      1680,
+      1680
+    ],
+    "props": {
+      "name": "view_reticle_shoot4",
+      "visible": "true",
+      "style:normal:border_width": "0",
+      "floating": "false",
+      "opacity": "255"
+    },
+    "children": [
+      {
+        "type": "view",
+        "rect": [
+          800,
+          800,
+          80,
+          80
+        ],
+        "props": {
+          "name": "view_reticle4_wh_1",
+          "style:normal:bg_color": "#00000000",
+          "style:normal:border_color": "#000000",
+          "style:normal:round_radius": "500",
+          "style:normal:round_radius_top_left": "500",
+          "style:normal:border_width": "2"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          780,
+          839,
+          20,
+          2
+        ],
+        "props": {
+          "name": "view_reticle4_w_1",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          830,
+          839,
+          20,
+          2
+        ],
+        "props": {
+          "name": "view_reticle4_w_2",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          880,
+          839,
+          20,
+          2
+        ],
+        "props": {
+          "name": "view_reticle4_w_3",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          839,
+          880,
+          2,
+          20
+        ],
+        "props": {
+          "name": "view_reticle4_h_2",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          839,
+          830,
+          2,
+          20
+        ],
+        "props": {
+          "name": "view_reticle4_h_1",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      }
+    ]
+  },
+  "trace": [
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle4_w_1",
+      "values": [
+        780,
+        839,
+        20,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle4_w_2",
+      "values": [
+        830,
+        839,
+        20,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle4_w_3",
+      "values": [
+        880,
+        839,
+        20,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle4_h_2",
+      "values": [
+        839,
+        880,
+        2,
+        20
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle4_h_1",
+      "values": [
+        839,
+        830,
+        2,
+        20
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle4_wh_1",
+      "values": [
+        800,
+        800,
+        80,
+        80
+      ]
+    }
+  ]
+}

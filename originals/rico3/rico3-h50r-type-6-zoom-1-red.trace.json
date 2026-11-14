@@ -1,0 +1,1188 @@
+{
+  "reticle_internal_type": 5,
+  "palette_selector": 0,
+  "inputs": {
+    "0x154": 0,
+    "0x1f0": 0,
+    "0x1fc": 5,
+    "0x25c": 0,
+    "0x2bc": 5,
+    "0x440": 3,
+    "0x458": 1.0,
+    "0x33c8": 640.0,
+    "0x33cc": 640.0
+  },
+  "bridge_calls": {
+    "pen_new": 1,
+    "context": 1,
+    "strncasecmp": 1,
+    "pen_width": 1,
+    "color_new": 2,
+    "pen_setcolor": 4,
+    "pen_color": 2,
+    "color_alpha": 2,
+    "set_pen": 2,
+    "lines": 54,
+    "pen_delete": 1
+  },
+  "executed_blocks": [
+    "0x4498d8",
+    "0x449920",
+    "0x449938",
+    "0x449958",
+    "0x449964",
+    "0x449990",
+    "0x4499b4",
+    "0x4499bc",
+    "0x4499c4",
+    "0x4499cc",
+    "0x4499d4",
+    "0x44a990",
+    "0x44a99c",
+    "0x44cbc0",
+    "0x44cbd4",
+    "0x44cbe0",
+    "0x44a9e0",
+    "0x44a9ec",
+    "0x44aa18",
+    "0x44aa30",
+    "0x44aa3c",
+    "0x44aa48",
+    "0x44aa54",
+    "0x44aa78",
+    "0x44aaa4",
+    "0x44aadc",
+    "0x44c878",
+    "0x44c88c",
+    "0x44c898",
+    "0x44ab20",
+    "0x44ab2c",
+    "0x44ab58",
+    "0x44ab6c",
+    "0x44ab78",
+    "0x44ab84",
+    "0x44ab94",
+    "0x44abb4",
+    "0x44abec",
+    "0x44ac00",
+    "0x44ac20",
+    "0x44ac54",
+    "0x44ac88",
+    "0x44ac94",
+    "0x44adc0",
+    "0x44acd0",
+    "0x44acf4",
+    "0x44ad20",
+    "0x44ad50",
+    "0x44ad84",
+    "0x44adb4",
+    "0x44adc0",
+    "0x44acd0",
+    "0x44acf4",
+    "0x44ad20",
+    "0x44ad50",
+    "0x44ad84",
+    "0x44adb4",
+    "0x44adc0",
+    "0x44acd0",
+    "0x44acf4",
+    "0x44ad20",
+    "0x44ad50",
+    "0x44ad84",
+    "0x44adb4",
+    "0x44aea0",
+    "0x44afdc",
+    "0x44aee0",
+    "0x44af0c",
+    "0x44af3c",
+    "0x44af68",
+    "0x44afa4",
+    "0x44afd0",
+    "0x44afdc",
+    "0x44aee0",
+    "0x44af0c",
+    "0x44af3c",
+    "0x44af68",
+    "0x44afa4",
+    "0x44afd0",
+    "0x44afdc",
+    "0x44aee0",
+    "0x44af0c",
+    "0x44af3c",
+    "0x44af68",
+    "0x44afa4",
+    "0x44afd0",
+    "0x44afdc",
+    "0x44aee0",
+    "0x44af0c",
+    "0x44af3c",
+    "0x44af68",
+    "0x44afa4",
+    "0x44afd0",
+    "0x44afdc",
+    "0x44aee0",
+    "0x44af0c",
+    "0x44af3c",
+    "0x44af68",
+    "0x44afa4",
+    "0x44afd0",
+    "0x44afdc",
+    "0x44aee0",
+    "0x44af0c",
+    "0x44af3c",
+    "0x44af68",
+    "0x44afa4",
+    "0x44afd0",
+    "0x44afdc",
+    "0x44aee0",
+    "0x44af0c",
+    "0x44af3c",
+    "0x44af68",
+    "0x44afa4",
+    "0x44afd0",
+    "0x44afdc",
+    "0x44aee0",
+    "0x44af0c",
+    "0x44af3c",
+    "0x44af68",
+    "0x44afa4",
+    "0x44afd0",
+    "0x44afdc",
+    "0x44aee0",
+    "0x44af0c",
+    "0x44af3c",
+    "0x44af68",
+    "0x44afa4",
+    "0x44afd0",
+    "0x4499ec",
+    "0x4499f4"
+  ],
+  "primitives": [
+    {
+      "call": "lines",
+      "call_site": "0x44aaa0",
+      "width": 1,
+      "rgba": [
+        255,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          636,
+          640,
+          644,
+          640
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44aad8",
+      "width": 1,
+      "rgba": [
+        255,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          640,
+          636,
+          640,
+          644
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44abe8",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          547,
+          640,
+          628,
+          640
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44ac1c",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          652,
+          640,
+          733,
+          640
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44ac50",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          640,
+          547,
+          640,
+          628
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44ac84",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          640,
+          652,
+          640,
+          733
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44ad1c",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          493,
+          639,
+          547,
+          639
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44ad4c",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          733,
+          639,
+          787,
+          639
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44ad80",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          639,
+          547,
+          639,
+          493
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44adb0",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          639,
+          733,
+          639,
+          787
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44ad1c",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          493,
+          640,
+          547,
+          640
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44ad4c",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          733,
+          640,
+          787,
+          640
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44ad80",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          640,
+          547,
+          640,
+          493
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44adb0",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          640,
+          733,
+          640,
+          787
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44ad1c",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          493,
+          641,
+          547,
+          641
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44ad4c",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          733,
+          641,
+          787,
+          641
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44ad80",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          641,
+          547,
+          641,
+          493
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44adb0",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          641,
+          733,
+          641,
+          787
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44af38",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          628,
+          638,
+          628,
+          642
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44af64",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          652,
+          638,
+          652,
+          642
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44afa0",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          638,
+          628,
+          642,
+          628
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44afcc",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          638,
+          652,
+          642,
+          652
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44af38",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          619,
+          638,
+          619,
+          642
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44af64",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          661,
+          638,
+          661,
+          642
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44afa0",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          638,
+          619,
+          642,
+          619
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44afcc",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          638,
+          661,
+          642,
+          661
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44af38",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          610,
+          638,
+          610,
+          642
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44af64",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          670,
+          638,
+          670,
+          642
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44afa0",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          638,
+          610,
+          642,
+          610
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44afcc",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          638,
+          670,
+          642,
+          670
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44af38",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          601,
+          638,
+          601,
+          642
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44af64",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          679,
+          638,
+          679,
+          642
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44afa0",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          638,
+          601,
+          642,
+          601
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44afcc",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          638,
+          679,
+          642,
+          679
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44af38",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          592,
+          638,
+          592,
+          642
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44af64",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          688,
+          638,
+          688,
+          642
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44afa0",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          638,
+          592,
+          642,
+          592
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44afcc",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          638,
+          688,
+          642,
+          688
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44af38",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          583,
+          638,
+          583,
+          642
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44af64",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          697,
+          638,
+          697,
+          642
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44afa0",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          638,
+          583,
+          642,
+          583
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44afcc",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          638,
+          697,
+          642,
+          697
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44af38",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          574,
+          638,
+          574,
+          642
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44af64",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          706,
+          638,
+          706,
+          642
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44afa0",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          638,
+          574,
+          642,
+          574
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44afcc",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          638,
+          706,
+          642,
+          706
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44af38",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          565,
+          638,
+          565,
+          642
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44af64",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          715,
+          638,
+          715,
+          642
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44afa0",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          638,
+          565,
+          642,
+          565
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44afcc",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          638,
+          715,
+          642,
+          715
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44af38",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          556,
+          638,
+          556,
+          642
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44af64",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          724,
+          638,
+          724,
+          642
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44afa0",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          638,
+          556,
+          642,
+          556
+        ]
+      ]
+    },
+    {
+      "call": "lines",
+      "call_site": "0x44afcc",
+      "width": 1,
+      "rgba": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "lines": [
+        [
+          638,
+          724,
+          642,
+          724
+        ]
+      ]
+    }
+  ]
+}

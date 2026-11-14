@@ -1,0 +1,281 @@
+{
+  "device": "Nocpix RICO 3 H50R",
+  "firmware": "0001.0118.010601",
+  "source": "/root/projects/ovod-firmware/nocpix-rico/ghidra_bins/ir_gui",
+  "source_sha256": "c9c59d812560c02e218720e265cf7879abc54253de869e8f805b594201f1ada6",
+  "method": "Exact ARM64 cross_paint emulation with native host Qt5 raster primitive bridge; not a device screenshot.",
+  "function": {
+    "start": "0x4498d8",
+    "end_exclusive": "0x4522b0"
+  },
+  "raster_qt_version": "5.15.14",
+  "geometry_transform": "None. Native 1280x1280 coordinates retained; anchor (640,640).",
+  "assets": [
+    {
+      "path": "rico3-h50r-type-1-zoom-1-white.png",
+      "sha256": "28f506153c09f965b6f37c63ec1fe090b8f1b1b7270fb7f7850b5c7edac09aac",
+      "ui_type": 1,
+      "internal_type": 0,
+      "palette_selector": 4,
+      "color": "white",
+      "zoom": 1,
+      "anchor": [
+        640,
+        640
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "primitive_count": 2,
+      "trace": "rico3-h50r-type-1-zoom-1-white.trace.json"
+    },
+    {
+      "path": "rico3-h50r-type-1-zoom-1-red.png",
+      "sha256": "7a71af7ffe779479a983bc84c9a4cde43bdac11e0cc11eff1e9d45c96301ae2e",
+      "ui_type": 1,
+      "internal_type": 0,
+      "palette_selector": 0,
+      "color": "red",
+      "zoom": 1,
+      "anchor": [
+        640,
+        640
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "primitive_count": 2,
+      "trace": "rico3-h50r-type-1-zoom-1-red.trace.json"
+    },
+    {
+      "path": "rico3-h50r-type-2-zoom-1-white.png",
+      "sha256": "c010cffaf3cdf65dc7c229f0a593e7d4c18666c3c6f154090e78230eb68d9f28",
+      "ui_type": 2,
+      "internal_type": 1,
+      "palette_selector": 4,
+      "color": "white",
+      "zoom": 1,
+      "anchor": [
+        640,
+        640
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "primitive_count": 5,
+      "trace": "rico3-h50r-type-2-zoom-1-white.trace.json"
+    },
+    {
+      "path": "rico3-h50r-type-2-zoom-1-red.png",
+      "sha256": "385d17400993499dc32bc2922a1a9b116f45d9fb2d70128c0c10de423aa45374",
+      "ui_type": 2,
+      "internal_type": 1,
+      "palette_selector": 0,
+      "color": "red",
+      "zoom": 1,
+      "anchor": [
+        640,
+        640
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "primitive_count": 5,
+      "trace": "rico3-h50r-type-2-zoom-1-red.trace.json"
+    },
+    {
+      "path": "rico3-h50r-type-3-zoom-1-white.png",
+      "sha256": "264df1b924a98a63301e20e5aaede36f855de42c8cff47682ca272245d5def66",
+      "ui_type": 3,
+      "internal_type": 2,
+      "palette_selector": 4,
+      "color": "white",
+      "zoom": 1,
+      "anchor": [
+        640,
+        640
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "primitive_count": 14,
+      "trace": "rico3-h50r-type-3-zoom-1-white.trace.json"
+    },
+    {
+      "path": "rico3-h50r-type-3-zoom-1-red.png",
+      "sha256": "7faa7d5299a4eda3ab208b5a8046ec47bc04a83fa1d3ca5d3ebf469f7e7b2e4c",
+      "ui_type": 3,
+      "internal_type": 2,
+      "palette_selector": 0,
+      "color": "red",
+      "zoom": 1,
+      "anchor": [
+        640,
+        640
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "primitive_count": 14,
+      "trace": "rico3-h50r-type-3-zoom-1-red.trace.json"
+    },
+    {
+      "path": "rico3-h50r-type-4-zoom-1-white.png",
+      "sha256": "60d1b0d5eacdabed103bf0182d70627e17d311719d5b16fc2a97ca534c839084",
+      "ui_type": 4,
+      "internal_type": 3,
+      "palette_selector": 4,
+      "color": "white",
+      "zoom": 1,
+      "anchor": [
+        640,
+        640
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "primitive_count": 18,
+      "trace": "rico3-h50r-type-4-zoom-1-white.trace.json"
+    },
+    {
+      "path": "rico3-h50r-type-4-zoom-1-red.png",
+      "sha256": "ac5ccea0e245b0f7b849a7bb9036e7f42ac07479012c924da210446a105f0bac",
+      "ui_type": 4,
+      "internal_type": 3,
+      "palette_selector": 0,
+      "color": "red",
+      "zoom": 1,
+      "anchor": [
+        640,
+        640
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "primitive_count": 18,
+      "trace": "rico3-h50r-type-4-zoom-1-red.trace.json"
+    },
+    {
+      "path": "rico3-h50r-type-5-zoom-1-white.png",
+      "sha256": "e9b810111b641d1f566c92265dbebc6856523c654ebddab0a79a4a9eebf3f80b",
+      "ui_type": 5,
+      "internal_type": 4,
+      "palette_selector": 4,
+      "color": "white",
+      "zoom": 1,
+      "anchor": [
+        640,
+        640
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "primitive_count": 7,
+      "trace": "rico3-h50r-type-5-zoom-1-white.trace.json"
+    },
+    {
+      "path": "rico3-h50r-type-5-zoom-1-red.png",
+      "sha256": "b2697676cb5f9056071767b40624ef4e98d4236b9b55c0fc48da34bd19f1f1b1",
+      "ui_type": 5,
+      "internal_type": 4,
+      "palette_selector": 0,
+      "color": "red",
+      "zoom": 1,
+      "anchor": [
+        640,
+        640
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "primitive_count": 7,
+      "trace": "rico3-h50r-type-5-zoom-1-red.trace.json"
+    },
+    {
+      "path": "rico3-h50r-type-6-zoom-1-white.png",
+      "sha256": "22a5ada2966921751b7878ddf651bebaf8487fdb511b55f389061cf19395c7aa",
+      "ui_type": 6,
+      "internal_type": 5,
+      "palette_selector": 4,
+      "color": "white",
+      "zoom": 1,
+      "anchor": [
+        640,
+        640
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "primitive_count": 54,
+      "trace": "rico3-h50r-type-6-zoom-1-white.trace.json"
+    },
+    {
+      "path": "rico3-h50r-type-6-zoom-1-red.png",
+      "sha256": "4a2d38faa1f34650508c783f5e8ebd93b3a387ad1a2d80e6d7673e487c68664f",
+      "ui_type": 6,
+      "internal_type": 5,
+      "palette_selector": 0,
+      "color": "red",
+      "zoom": 1,
+      "anchor": [
+        640,
+        640
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "primitive_count": 54,
+      "trace": "rico3-h50r-type-6-zoom-1-red.trace.json"
+    },
+    {
+      "path": "rico3-h50r-type-7-zoom-1-white.png",
+      "sha256": "13223206453afd00e973149923c3ab5fe1abfab4379a52a117064c4d2cc06d29",
+      "ui_type": 7,
+      "internal_type": 6,
+      "palette_selector": 4,
+      "color": "white",
+      "zoom": 1,
+      "anchor": [
+        640,
+        640
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "primitive_count": 48,
+      "trace": "rico3-h50r-type-7-zoom-1-white.trace.json"
+    },
+    {
+      "path": "rico3-h50r-type-7-zoom-1-red.png",
+      "sha256": "10164e468a6173b1011db5f03e21c91566e65015a099737d578be07fb98009ed",
+      "ui_type": 7,
+      "internal_type": 6,
+      "palette_selector": 0,
+      "color": "red",
+      "zoom": 1,
+      "anchor": [
+        640,
+        640
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "primitive_count": 48,
+      "trace": "rico3-h50r-type-7-zoom-1-red.trace.json"
+    }
+  ]
+}

@@ -1,0 +1,3622 @@
+{
+  "title": "RikaNV · сравнение прицельных сеток",
+  "published_date": "2026-11-14",
+  "sources": {
+    "lpr_draw": {
+      "path": "rix-l6r/qrc/0x13501a0/cross/Drawreticle.qml",
+      "sha256": "8f99d0921c08975897d6229d586a6b5b7f40e54d135056412ea3b33346d5fcc4"
+    },
+    "lpr_custom": {
+      "path": "rix-l6r/qrc/0x13501a0/cross/Crossmenu.qml",
+      "sha256": "8866e9ac3ac16d4757f3dcec0d028f2c0b8508230782c63b0602df403ba4dec1"
+    },
+    "kaban_renderer": {
+      "path": "tools/reticle-editor/src/rikaRender.ts",
+      "sha256": "c24ac62306ed03fed036af73b64390f5c3d87ebe710a9b8d6d4079c4ac85583d"
+    },
+    "kaban_format": {
+      "path": "tools/reticle-editor/src/format.ts",
+      "sha256": "cec2e58a814d1f408de5f4d63455d3775ef57e0a109296e47dd3b0ebafb9b70d"
+    },
+    "kaban_generator": {
+      "path": "tools/reticle-editor/rikaGenerateFirmwareReticles.mjs",
+      "sha256": "f0b1b88b5e99426a294c449ade50fe8fe7e994d81cc8768691a34e0044913786"
+    },
+    "kaban_profiles": {
+      "path": "embedded/examples/rika_device_profile.h",
+      "sha256": "6ba258d0c04ea88d2b421539963c92c38aeb5a840bdfedf3cd3c417db9fded6e"
+    },
+    "kaban_generated_c": {
+      "path": "src/pages/rika_reticle_data.c",
+      "sha256": "fd609175bcafa1b78e1e326ff9e143798388d3d906ced07eb4532ddd1fa192b2"
+    },
+    "engine_commit": "c555c2b109794fa4c64d49869134b68b61312d47",
+    "hotpot_commit": "2d969ce2c34301a3076affdcacf7b2e379baa6d0",
+    "rico3": {
+      "device": "Nocpix RICO 3 H50R",
+      "firmware": "0001.0118.010601",
+      "source": "nocpix-rico/ghidra_bins/ir_gui",
+      "source_sha256": "c9c59d812560c02e218720e265cf7879abc54253de869e8f805b594201f1ada6",
+      "method": "Exact ARM64 cross_paint emulation with native host Qt5 raster primitive bridge; not a device screenshot.",
+      "function": {
+        "start": "0x4498d8",
+        "end_exclusive": "0x4522b0"
+      },
+      "raster_qt_version": "5.15.14",
+      "geometry_transform": "None. Native 1280x1280 coordinates retained; anchor (640,640)."
+    }
+  },
+  "limits": [
+    "Shape comparison only: cropped previews use independent fit scales. No common angular calibration or cross-model mil equality is implied.",
+    "Rasterization is performed on the host, not captured from a physical scope. No device access or firmware change.",
+    "RICO 3 H50R stock UI types 1–7 only, white/red palette at zoom 1; configurable internal type 7 is not a fixed stock design and is not included. H50RPro and other RICO generations are excluded.",
+    "LPR active Canvas types 0–7 are distinct from legacy PNGs whose Image widget is commented out. Type 8 is configurable: two examples use source defaults; persisted user configurations are not recovered.",
+    "DBH menu background PNGs are byte-identical in D12/D6, but executed reticle geometry differs: independent D12 and D6 variants are shown. Rounding, font and host raster effects are not device-verified.",
+    "Kaban JSON is the source of truth. Marks 1–6 are nominal stock catalog geometry, mark5 includes the authored perpendicular strokes of ADR-0080; Kedr mark7 and mil-cross mark8 are authored. Only Kaban PN 509–512, not Moskit PN 502/504.",
+    "Kaban PNGs render catalog geometry without the firmware night-vision outline, scene, ballistic marker, or hardware projection. Native-buffer coordinates and the catalog K1 are used, not the legacy 800px simulated preview surface."
+  ],
+  "assets": [
+    {
+      "id": "rico-1-white",
+      "group": "rico",
+      "model": "RICO 3 H50R",
+      "name": "Тип 1",
+      "kind": "Штатная · ARM64 → Qt",
+      "variant": "white",
+      "path": "assets/rico3/rico3-h50r-type-1-zoom-1-white.png",
+      "original": "assets/rico3/rico3-h50r-type-1-zoom-1-white.png",
+      "trace": "originals/rico3/rico3-h50r-type-1-zoom-1-white.trace.json",
+      "type": 1,
+      "zoom": 1,
+      "origin": "Восстановлено исполнением кода рисования",
+      "notes": "Прозрачный растр 1280×1280; чёрные вторичные штрихи сохранены. Не кадр прибора.",
+      "preview": "previews/rico-1-white.png",
+      "preview_crop": [
+        611,
+        611,
+        669,
+        669
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "28f506153c09f965b6f37c63ec1fe090b8f1b1b7270fb7f7850b5c7edac09aac",
+      "preview_sha256": "fc20a00b484e58acddbfed9c785099b74aadb146fc1563fac613aafbdc294af4"
+    },
+    {
+      "id": "rico-1-red",
+      "group": "rico",
+      "model": "RICO 3 H50R",
+      "name": "Тип 1",
+      "kind": "Штатная · ARM64 → Qt",
+      "variant": "red",
+      "path": "assets/rico3/rico3-h50r-type-1-zoom-1-red.png",
+      "original": "assets/rico3/rico3-h50r-type-1-zoom-1-red.png",
+      "trace": "originals/rico3/rico3-h50r-type-1-zoom-1-red.trace.json",
+      "type": 1,
+      "zoom": 1,
+      "origin": "Восстановлено исполнением кода рисования",
+      "notes": "Прозрачный растр 1280×1280; чёрные вторичные штрихи сохранены. Не кадр прибора.",
+      "preview": "previews/rico-1-red.png",
+      "preview_crop": [
+        611,
+        611,
+        669,
+        669
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "7a71af7ffe779479a983bc84c9a4cde43bdac11e0cc11eff1e9d45c96301ae2e",
+      "preview_sha256": "82e904e5775ed74be96723cd665b97ebb33a9620d64f69110872f497b05ad83a"
+    },
+    {
+      "id": "rico-2-white",
+      "group": "rico",
+      "model": "RICO 3 H50R",
+      "name": "Тип 2",
+      "kind": "Штатная · ARM64 → Qt",
+      "variant": "white",
+      "path": "assets/rico3/rico3-h50r-type-2-zoom-1-white.png",
+      "original": "assets/rico3/rico3-h50r-type-2-zoom-1-white.png",
+      "trace": "originals/rico3/rico3-h50r-type-2-zoom-1-white.trace.json",
+      "type": 2,
+      "zoom": 1,
+      "origin": "Восстановлено исполнением кода рисования",
+      "notes": "Прозрачный растр 1280×1280; чёрные вторичные штрихи сохранены. Не кадр прибора.",
+      "preview": "previews/rico-2-white.png",
+      "preview_crop": [
+        437,
+        611,
+        843,
+        844
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "c010cffaf3cdf65dc7c229f0a593e7d4c18666c3c6f154090e78230eb68d9f28",
+      "preview_sha256": "d8d04d9d6ba32aa112e259ed6c3f0e3d3444b7b73eec94ecfa71d5c8bd76cf76"
+    },
+    {
+      "id": "rico-2-red",
+      "group": "rico",
+      "model": "RICO 3 H50R",
+      "name": "Тип 2",
+      "kind": "Штатная · ARM64 → Qt",
+      "variant": "red",
+      "path": "assets/rico3/rico3-h50r-type-2-zoom-1-red.png",
+      "original": "assets/rico3/rico3-h50r-type-2-zoom-1-red.png",
+      "trace": "originals/rico3/rico3-h50r-type-2-zoom-1-red.trace.json",
+      "type": 2,
+      "zoom": 1,
+      "origin": "Восстановлено исполнением кода рисования",
+      "notes": "Прозрачный растр 1280×1280; чёрные вторичные штрихи сохранены. Не кадр прибора.",
+      "preview": "previews/rico-2-red.png",
+      "preview_crop": [
+        437,
+        611,
+        843,
+        844
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "385d17400993499dc32bc2922a1a9b116f45d9fb2d70128c0c10de423aa45374",
+      "preview_sha256": "14af58f2c784b96aeae056e1e836f8c508e92d63dbbf3b1665406c5b4d7b5d31"
+    },
+    {
+      "id": "rico-3-white",
+      "group": "rico",
+      "model": "RICO 3 H50R",
+      "name": "Тип 3",
+      "kind": "Штатная · ARM64 → Qt",
+      "variant": "white",
+      "path": "assets/rico3/rico3-h50r-type-3-zoom-1-white.png",
+      "original": "assets/rico3/rico3-h50r-type-3-zoom-1-white.png",
+      "trace": "originals/rico3/rico3-h50r-type-3-zoom-1-white.trace.json",
+      "type": 3,
+      "zoom": 1,
+      "origin": "Восстановлено исполнением кода рисования",
+      "notes": "Прозрачный растр 1280×1280; чёрные вторичные штрихи сохранены. Не кадр прибора.",
+      "preview": "previews/rico-3-white.png",
+      "preview_crop": [
+        449,
+        449,
+        831,
+        831
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "264df1b924a98a63301e20e5aaede36f855de42c8cff47682ca272245d5def66",
+      "preview_sha256": "9df923d5b62df1d5969f41157bcc5361b5dc7e5eceaf3fb6baeffab0db0a8b30"
+    },
+    {
+      "id": "rico-3-red",
+      "group": "rico",
+      "model": "RICO 3 H50R",
+      "name": "Тип 3",
+      "kind": "Штатная · ARM64 → Qt",
+      "variant": "red",
+      "path": "assets/rico3/rico3-h50r-type-3-zoom-1-red.png",
+      "original": "assets/rico3/rico3-h50r-type-3-zoom-1-red.png",
+      "trace": "originals/rico3/rico3-h50r-type-3-zoom-1-red.trace.json",
+      "type": 3,
+      "zoom": 1,
+      "origin": "Восстановлено исполнением кода рисования",
+      "notes": "Прозрачный растр 1280×1280; чёрные вторичные штрихи сохранены. Не кадр прибора.",
+      "preview": "previews/rico-3-red.png",
+      "preview_crop": [
+        449,
+        449,
+        831,
+        831
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "7faa7d5299a4eda3ab208b5a8046ec47bc04a83fa1d3ca5d3ebf469f7e7b2e4c",
+      "preview_sha256": "1877ad35f5093826ae6224e0fc6feac2d7cff71b847cc27f6fa9ce001f3ea1f8"
+    },
+    {
+      "id": "rico-4-white",
+      "group": "rico",
+      "model": "RICO 3 H50R",
+      "name": "Тип 4",
+      "kind": "Штатная · ARM64 → Qt",
+      "variant": "white",
+      "path": "assets/rico3/rico3-h50r-type-4-zoom-1-white.png",
+      "original": "assets/rico3/rico3-h50r-type-4-zoom-1-white.png",
+      "trace": "originals/rico3/rico3-h50r-type-4-zoom-1-white.trace.json",
+      "type": 4,
+      "zoom": 1,
+      "origin": "Восстановлено исполнением кода рисования",
+      "notes": "Прозрачный растр 1280×1280; чёрные вторичные штрихи сохранены. Не кадр прибора.",
+      "preview": "previews/rico-4-white.png",
+      "preview_crop": [
+        354,
+        354,
+        926,
+        926
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "60d1b0d5eacdabed103bf0182d70627e17d311719d5b16fc2a97ca534c839084",
+      "preview_sha256": "8197b19b919e23a8f3e6912c95d6be860454d38771f7f7541068bc3fa0357f4d"
+    },
+    {
+      "id": "rico-4-red",
+      "group": "rico",
+      "model": "RICO 3 H50R",
+      "name": "Тип 4",
+      "kind": "Штатная · ARM64 → Qt",
+      "variant": "red",
+      "path": "assets/rico3/rico3-h50r-type-4-zoom-1-red.png",
+      "original": "assets/rico3/rico3-h50r-type-4-zoom-1-red.png",
+      "trace": "originals/rico3/rico3-h50r-type-4-zoom-1-red.trace.json",
+      "type": 4,
+      "zoom": 1,
+      "origin": "Восстановлено исполнением кода рисования",
+      "notes": "Прозрачный растр 1280×1280; чёрные вторичные штрихи сохранены. Не кадр прибора.",
+      "preview": "previews/rico-4-red.png",
+      "preview_crop": [
+        354,
+        354,
+        926,
+        926
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "ac5ccea0e245b0f7b849a7bb9036e7f42ac07479012c924da210446a105f0bac",
+      "preview_sha256": "f21d248613eb59bee30491e53852e5af074d974adb7865248bbd562606f662aa"
+    },
+    {
+      "id": "rico-5-white",
+      "group": "rico",
+      "model": "RICO 3 H50R",
+      "name": "Тип 5",
+      "kind": "Штатная · ARM64 → Qt",
+      "variant": "white",
+      "path": "assets/rico3/rico3-h50r-type-5-zoom-1-white.png",
+      "original": "assets/rico3/rico3-h50r-type-5-zoom-1-white.png",
+      "trace": "originals/rico3/rico3-h50r-type-5-zoom-1-white.trace.json",
+      "type": 5,
+      "zoom": 1,
+      "origin": "Восстановлено исполнением кода рисования",
+      "notes": "Прозрачный растр 1280×1280; чёрные вторичные штрихи сохранены. Не кадр прибора.",
+      "preview": "previews/rico-5-white.png",
+      "preview_crop": [
+        372,
+        372,
+        908,
+        908
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "e9b810111b641d1f566c92265dbebc6856523c654ebddab0a79a4a9eebf3f80b",
+      "preview_sha256": "c62bc8a3e9d95d67977a2526d56271913a953cabb87d854db0b4526926e52e32"
+    },
+    {
+      "id": "rico-5-red",
+      "group": "rico",
+      "model": "RICO 3 H50R",
+      "name": "Тип 5",
+      "kind": "Штатная · ARM64 → Qt",
+      "variant": "red",
+      "path": "assets/rico3/rico3-h50r-type-5-zoom-1-red.png",
+      "original": "assets/rico3/rico3-h50r-type-5-zoom-1-red.png",
+      "trace": "originals/rico3/rico3-h50r-type-5-zoom-1-red.trace.json",
+      "type": 5,
+      "zoom": 1,
+      "origin": "Восстановлено исполнением кода рисования",
+      "notes": "Прозрачный растр 1280×1280; чёрные вторичные штрихи сохранены. Не кадр прибора.",
+      "preview": "previews/rico-5-red.png",
+      "preview_crop": [
+        372,
+        372,
+        908,
+        908
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "b2697676cb5f9056071767b40624ef4e98d4236b9b55c0fc48da34bd19f1f1b1",
+      "preview_sha256": "ecf2f058e8d4d1b38c13529f9aaf405b0d968b4c640152b61e90a32811ef400d"
+    },
+    {
+      "id": "rico-6-white",
+      "group": "rico",
+      "model": "RICO 3 H50R",
+      "name": "Тип 6",
+      "kind": "Штатная · ARM64 → Qt",
+      "variant": "white",
+      "path": "assets/rico3/rico3-h50r-type-6-zoom-1-white.png",
+      "original": "assets/rico3/rico3-h50r-type-6-zoom-1-white.png",
+      "trace": "originals/rico3/rico3-h50r-type-6-zoom-1-white.trace.json",
+      "type": 6,
+      "zoom": 1,
+      "origin": "Восстановлено исполнением кода рисования",
+      "notes": "Прозрачный растр 1280×1280; чёрные вторичные штрихи сохранены. Не кадр прибора.",
+      "preview": "previews/rico-6-white.png",
+      "preview_crop": [
+        468,
+        468,
+        812,
+        812
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "22a5ada2966921751b7878ddf651bebaf8487fdb511b55f389061cf19395c7aa",
+      "preview_sha256": "5705eeef85a976e9c3f9546d551eae394fe451fd144dfdfb33d428b636e91478"
+    },
+    {
+      "id": "rico-6-red",
+      "group": "rico",
+      "model": "RICO 3 H50R",
+      "name": "Тип 6",
+      "kind": "Штатная · ARM64 → Qt",
+      "variant": "red",
+      "path": "assets/rico3/rico3-h50r-type-6-zoom-1-red.png",
+      "original": "assets/rico3/rico3-h50r-type-6-zoom-1-red.png",
+      "trace": "originals/rico3/rico3-h50r-type-6-zoom-1-red.trace.json",
+      "type": 6,
+      "zoom": 1,
+      "origin": "Восстановлено исполнением кода рисования",
+      "notes": "Прозрачный растр 1280×1280; чёрные вторичные штрихи сохранены. Не кадр прибора.",
+      "preview": "previews/rico-6-red.png",
+      "preview_crop": [
+        468,
+        468,
+        812,
+        812
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "4a2d38faa1f34650508c783f5e8ebd93b3a387ad1a2d80e6d7673e487c68664f",
+      "preview_sha256": "0c913dca07a72a84e1a9ee80afe1311b6eb20076c5a0f527f8b1c60a6d103c0c"
+    },
+    {
+      "id": "rico-7-white",
+      "group": "rico",
+      "model": "RICO 3 H50R",
+      "name": "Тип 7",
+      "kind": "Штатная · ARM64 → Qt",
+      "variant": "white",
+      "path": "assets/rico3/rico3-h50r-type-7-zoom-1-white.png",
+      "original": "assets/rico3/rico3-h50r-type-7-zoom-1-white.png",
+      "trace": "originals/rico3/rico3-h50r-type-7-zoom-1-white.trace.json",
+      "type": 7,
+      "zoom": 1,
+      "origin": "Восстановлено исполнением кода рисования",
+      "notes": "Прозрачный растр 1280×1280; чёрные вторичные штрихи сохранены. Не кадр прибора.",
+      "preview": "previews/rico-7-white.png",
+      "preview_crop": [
+        477,
+        613,
+        803,
+        886
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "13223206453afd00e973149923c3ab5fe1abfab4379a52a117064c4d2cc06d29",
+      "preview_sha256": "124fdeac736a6cd0c65ad671b02c655a90fc3f4fb856cf4bd2a022a836e6acd3"
+    },
+    {
+      "id": "rico-7-red",
+      "group": "rico",
+      "model": "RICO 3 H50R",
+      "name": "Тип 7",
+      "kind": "Штатная · ARM64 → Qt",
+      "variant": "red",
+      "path": "assets/rico3/rico3-h50r-type-7-zoom-1-red.png",
+      "original": "assets/rico3/rico3-h50r-type-7-zoom-1-red.png",
+      "trace": "originals/rico3/rico3-h50r-type-7-zoom-1-red.trace.json",
+      "type": 7,
+      "zoom": 1,
+      "origin": "Восстановлено исполнением кода рисования",
+      "notes": "Прозрачный растр 1280×1280; чёрные вторичные штрихи сохранены. Не кадр прибора.",
+      "preview": "previews/rico-7-red.png",
+      "preview_crop": [
+        477,
+        613,
+        803,
+        886
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "10164e468a6173b1011db5f03e21c91566e65015a099737d578be07fb98009ed",
+      "preview_sha256": "5715a3aeeab5f6410a3413b41b25686d99e847016750565e1154fb4b0ffa698a"
+    },
+    {
+      "id": "kaban-1A00500509-1-1",
+      "group": "kaban",
+      "model": "Kaban 335 LRF",
+      "name": "Марка 1 · mark1",
+      "kind": "Штатная · номинальная геометрия",
+      "pn": "1A00500509",
+      "path": "assets/kaban/rika-1A00500509-mark1-zoom1.png",
+      "original": "originals/kaban/1A00500509/mark1.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500509-1-1.png",
+      "preview_crop": [
+        389,
+        269,
+        570,
+        450
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "9478bc99b75f1d3ac93b754a5c05a7f017bb66b05ebcc99287d0cb77abd7f0c1",
+      "preview_sha256": "180b1fea84bf2ddc5f0dd3d2929563f9fb672833ae6d5d443ce343ff8747c4c1"
+    },
+    {
+      "id": "kaban-1A00500509-2-1",
+      "group": "kaban",
+      "model": "Kaban 335 LRF",
+      "name": "Марка 2 · mark2",
+      "kind": "Штатная · номинальная геометрия",
+      "pn": "1A00500509",
+      "path": "assets/kaban/rika-1A00500509-mark2-zoom1.png",
+      "original": "originals/kaban/1A00500509/mark2.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500509-2-1.png",
+      "preview_crop": [
+        389,
+        334,
+        570,
+        450
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "319968d5e89526ebc8dcff0b753c2174309accb972509d4cdfc8a2e17d517189",
+      "preview_sha256": "c89ab33720372206916ff4ca99cd22456d89ba61ab9f626eae221e4e0922d741"
+    },
+    {
+      "id": "kaban-1A00500509-3-1",
+      "group": "kaban",
+      "model": "Kaban 335 LRF",
+      "name": "Марка 3 · mark3",
+      "kind": "Штатная · номинальная геометрия",
+      "pn": "1A00500509",
+      "path": "assets/kaban/rika-1A00500509-mark3-zoom1.png",
+      "original": "originals/kaban/1A00500509/mark3.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500509-3-1.png",
+      "preview_crop": [
+        389,
+        334,
+        570,
+        450
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "ac2dbfd4ebb9f378fb24c14ea20b0b51292ae4c6d572fecf6ea6ac5cf444c414",
+      "preview_sha256": "3bf8b9d55c72f39cb35ad28b90b9576f5fc8d4639e212e5a426b35afc0ea4bcd"
+    },
+    {
+      "id": "kaban-1A00500509-4-1",
+      "group": "kaban",
+      "model": "Kaban 335 LRF",
+      "name": "Марка 4 · mark4",
+      "kind": "Штатная · номинальная геометрия",
+      "pn": "1A00500509",
+      "path": "assets/kaban/rika-1A00500509-mark4-zoom1.png",
+      "original": "originals/kaban/1A00500509/mark4.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500509-4-1.png",
+      "preview_crop": [
+        418,
+        312,
+        541,
+        458
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "cb4d07adf01660fbcfe84f3c451eb7e09c7c69ab730203375b8ef3da10017ac2",
+      "preview_sha256": "f785f71e9a51fcc3628dd09daf7ce6ca7dbb1ef099e1bf5f65cdac23a44c518a"
+    },
+    {
+      "id": "kaban-1A00500509-5-1",
+      "group": "kaban",
+      "model": "Kaban 335 LRF",
+      "name": "Марка 5 · mark5",
+      "kind": "Штатная + авторская правка ADR-0080",
+      "pn": "1A00500509",
+      "path": "assets/kaban/rika-1A00500509-mark5-zoom1.png",
+      "original": "originals/kaban/1A00500509/mark5.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500509-5-1.png",
+      "preview_crop": [
+        417,
+        333,
+        542,
+        466
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "2a7b567d017b7c8063652e7d55e59561b9434f8982ca5b6af0ce0dc37c2984ef",
+      "preview_sha256": "5e6dee6fea9d5ac4b9947be5526955f00bc7c7e884f8959011c4d217e52c5061"
+    },
+    {
+      "id": "kaban-1A00500509-6-1",
+      "group": "kaban",
+      "model": "Kaban 335 LRF",
+      "name": "Марка 6 · mark6",
+      "kind": "Штатная · номинальная геометрия",
+      "pn": "1A00500509",
+      "path": "assets/kaban/rika-1A00500509-mark6-zoom1.png",
+      "original": "originals/kaban/1A00500509/mark6.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500509-6-1.png",
+      "preview_crop": [
+        448,
+        328,
+        511,
+        391
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "66b3290b3ddcb24c40ad0e389769a725ae89d921740291dbf24aa77c48ad3a06",
+      "preview_sha256": "30a36f9f1bf3d74f6e33281bd3c82d0c31e8bfb2834e972df7cb467dd28c7125"
+    },
+    {
+      "id": "kaban-1A00500509-7-1",
+      "group": "kaban",
+      "model": "Kaban 335 LRF",
+      "name": "Кедр · mark7",
+      "kind": "Авторская",
+      "pn": "1A00500509",
+      "path": "assets/kaban/rika-1A00500509-mark7-zoom1.png",
+      "original": "originals/kaban/1A00500509/mark7.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500509-7-1.png",
+      "preview_crop": [
+        371,
+        292,
+        586,
+        464
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "69134bd23f31e1841f345ce91628814406aa069760006d2bf32975ab9db70b04",
+      "preview_sha256": "1586a7db8606b612bf55df881580d9d55af1769a8c133449ae6b32f5f170a3af"
+    },
+    {
+      "id": "kaban-1A00500509-7-2",
+      "group": "kaban",
+      "model": "Kaban 335 LRF",
+      "name": "Кедр · mark7",
+      "kind": "Авторская",
+      "pn": "1A00500509",
+      "path": "assets/kaban/rika-1A00500509-mark7-zoom2.png",
+      "original": "originals/kaban/1A00500509/mark7.json",
+      "zoom": 2,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500509-7-2.png",
+      "preview_crop": [
+        298,
+        255,
+        659,
+        537
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "a2d95577265502feeb27810c2f1f1084f77ac0b31a80c5c873b31247c0f8d82b",
+      "preview_sha256": "4ba44e536e22863473868638c92c4f93f2a206a347292e4102ab17ec34ffc629"
+    },
+    {
+      "id": "kaban-1A00500509-8-1",
+      "group": "kaban",
+      "model": "Kaban 335 LRF",
+      "name": "Мил-крест · mark8 (имя JSON: Марка 7)",
+      "kind": "Авторская",
+      "pn": "1A00500509",
+      "path": "assets/kaban/rika-1A00500509-mark8-zoom1.png",
+      "original": "originals/kaban/1A00500509/mark8.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500509-8-1.png",
+      "preview_crop": [
+        382,
+        262,
+        577,
+        457
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "702e5d8078128248d1cb4f4eae4a631e815311b89470418b88ed535e8acaa702",
+      "preview_sha256": "2ccce51967d4c0d672bfc0bb9f3e5e677d3b4b30442bd12172bfa5afb56b28ff"
+    },
+    {
+      "id": "kaban-1A00500510-1-1",
+      "group": "kaban",
+      "model": "Kaban 350 LRF",
+      "name": "Марка 1 · mark1",
+      "kind": "Штатная · номинальная геометрия",
+      "pn": "1A00500510",
+      "path": "assets/kaban/rika-1A00500510-mark1-zoom1.png",
+      "original": "originals/kaban/1A00500510/mark1.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500510-1-1.png",
+      "preview_crop": [
+        361,
+        241,
+        598,
+        478
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "3711b9789b4e6a61aa21515c6c47609403a87e4bd5409df15724d9dc448ab679",
+      "preview_sha256": "f76d64b156441e69bd556b29c1b18cdaabfe7e568275b7e317c2852bd43a646e"
+    },
+    {
+      "id": "kaban-1A00500510-2-1",
+      "group": "kaban",
+      "model": "Kaban 350 LRF",
+      "name": "Марка 2 · mark2",
+      "kind": "Штатная · номинальная геометрия",
+      "pn": "1A00500510",
+      "path": "assets/kaban/rika-1A00500510-mark2-zoom1.png",
+      "original": "originals/kaban/1A00500510/mark2.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500510-2-1.png",
+      "preview_crop": [
+        361,
+        334,
+        598,
+        478
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "b4e8f7b04a2fcb17cbf4685c7c0cf7490fa256d34911ae14d268656c169c8942",
+      "preview_sha256": "fa40669507b4dde5a36f64add23270726808984ba7eac7a1ae9c4c408826f704"
+    },
+    {
+      "id": "kaban-1A00500510-3-1",
+      "group": "kaban",
+      "model": "Kaban 350 LRF",
+      "name": "Марка 3 · mark3",
+      "kind": "Штатная · номинальная геометрия",
+      "pn": "1A00500510",
+      "path": "assets/kaban/rika-1A00500510-mark3-zoom1.png",
+      "original": "originals/kaban/1A00500510/mark3.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500510-3-1.png",
+      "preview_crop": [
+        361,
+        334,
+        598,
+        478
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "fe6377623d667339b83a9fcca4966058778871a47f03f8fe1be8ec999d8a5e85",
+      "preview_sha256": "ca66dcd3363a13866586b1911f0e041470109a065653b8d089684c683f2bc1b9"
+    },
+    {
+      "id": "kaban-1A00500510-4-1",
+      "group": "kaban",
+      "model": "Kaban 350 LRF",
+      "name": "Марка 4 · mark4",
+      "kind": "Штатная · номинальная геометрия",
+      "pn": "1A00500510",
+      "path": "assets/kaban/rika-1A00500510-mark4-zoom1.png",
+      "original": "originals/kaban/1A00500510/mark4.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500510-4-1.png",
+      "preview_crop": [
+        402,
+        303,
+        557,
+        489
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "fa1a62e6b301a39d3a9fc4e330950cba14522fbf8e219341efd93e7481ae9064",
+      "preview_sha256": "0f769ae91887cb272122c50695a541ae02094340adf769bb87198b80f5baf3ac"
+    },
+    {
+      "id": "kaban-1A00500510-5-1",
+      "group": "kaban",
+      "model": "Kaban 350 LRF",
+      "name": "Марка 5 · mark5",
+      "kind": "Штатная + авторская правка ADR-0080",
+      "pn": "1A00500510",
+      "path": "assets/kaban/rika-1A00500510-mark5-zoom1.png",
+      "original": "originals/kaban/1A00500510/mark5.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500510-5-1.png",
+      "preview_crop": [
+        400,
+        332,
+        559,
+        501
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "f1e532a5bd1cd15629892eabf33d7dd76ba644e81251d599ed07b4bf1aef17ed",
+      "preview_sha256": "6887eca73d01e1e5199d96e2fb80164ff1881b444de3a460cbeb0cbaeae3cb7f"
+    },
+    {
+      "id": "kaban-1A00500510-6-1",
+      "group": "kaban",
+      "model": "Kaban 350 LRF",
+      "name": "Марка 6 · mark6",
+      "kind": "Штатная · номинальная геометрия",
+      "pn": "1A00500510",
+      "path": "assets/kaban/rika-1A00500510-mark6-zoom1.png",
+      "original": "originals/kaban/1A00500510/mark6.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500510-6-1.png",
+      "preview_crop": [
+        445,
+        325,
+        514,
+        394
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "958159cdb3857bb4ce9d3dbea3987390997fcd4009097f88e35075a04ae36019",
+      "preview_sha256": "037d2b8369f2d415cafef538069d1e098bca6c6efe762c34a79591d236007d85"
+    },
+    {
+      "id": "kaban-1A00500510-7-1",
+      "group": "kaban",
+      "model": "Kaban 350 LRF",
+      "name": "Кедр · mark7",
+      "kind": "Авторская",
+      "pn": "1A00500510",
+      "path": "assets/kaban/rika-1A00500510-mark7-zoom1.png",
+      "original": "originals/kaban/1A00500510/mark7.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500510-7-1.png",
+      "preview_crop": [
+        339,
+        276,
+        618,
+        495
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "1b5dd4c0701cfe92deb28efc813c3b6560407a9c68a6733ce66b85f40a48e2ad",
+      "preview_sha256": "ee925466b881d8d2f43c59afe75bee1dd5a51a3f4868fe7273870cc688386a7b"
+    },
+    {
+      "id": "kaban-1A00500510-7-2",
+      "group": "kaban",
+      "model": "Kaban 350 LRF",
+      "name": "Кедр · mark7",
+      "kind": "Авторская",
+      "pn": "1A00500510",
+      "path": "assets/kaban/rika-1A00500510-mark7-zoom2.png",
+      "original": "originals/kaban/1A00500510/mark7.json",
+      "zoom": 2,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500510-7-2.png",
+      "preview_crop": [
+        235,
+        228,
+        722,
+        599
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "dac9f92e19c700ac58d69cff73cd30ccbc69d22c1a303d1522808b75d7b40ef3",
+      "preview_sha256": "f320d7799c69151bdfda679628066eef824f5f505cd32825a1c358a2c4860dc6"
+    },
+    {
+      "id": "kaban-1A00500510-8-1",
+      "group": "kaban",
+      "model": "Kaban 350 LRF",
+      "name": "Мил-крест · mark8 (имя JSON: Марка 7)",
+      "kind": "Авторская",
+      "pn": "1A00500510",
+      "path": "assets/kaban/rika-1A00500510-mark8-zoom1.png",
+      "original": "originals/kaban/1A00500510/mark8.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500510-8-1.png",
+      "preview_crop": [
+        351,
+        231,
+        608,
+        488
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "996c64a1316c1dc7ff24dc5b85a7561e549063bd2fbc20e64cc5392335cfad83",
+      "preview_sha256": "06ebe80c4e87d490dd9347fd7a1531d5f459b68e3257e12cbe2bb597f434da42"
+    },
+    {
+      "id": "kaban-1A00500511-1-1",
+      "group": "kaban",
+      "model": "Kaban 650 LRF",
+      "name": "Марка 1 · mark1",
+      "kind": "Штатная · номинальная геометрия",
+      "pn": "1A00500511",
+      "path": "assets/kaban/rika-1A00500511-mark1-zoom1.png",
+      "original": "originals/kaban/1A00500511/mark1.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500511-1-1.png",
+      "preview_crop": [
+        399,
+        279,
+        560,
+        440
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "80bfefe8e3d44109ba5610d4c2b8da92111c56bbbc675d9be8a3cfeca8195c39",
+      "preview_sha256": "8f2c643de867a3faf1fc180377adbf3ac7f2a8ae14106ee51d61597ab793d72f"
+    },
+    {
+      "id": "kaban-1A00500511-2-1",
+      "group": "kaban",
+      "model": "Kaban 650 LRF",
+      "name": "Марка 2 · mark2",
+      "kind": "Штатная · номинальная геометрия",
+      "pn": "1A00500511",
+      "path": "assets/kaban/rika-1A00500511-mark2-zoom1.png",
+      "original": "originals/kaban/1A00500511/mark2.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500511-2-1.png",
+      "preview_crop": [
+        399,
+        334,
+        560,
+        440
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "5f1fd62ee899d439537c1b312da198a52f47ce8696ce8e7b3e9f3a35ed315d74",
+      "preview_sha256": "103468c83379a873f8362b21dbe3bf4264a6b5ff6571a4bb2ae957d998b65638"
+    },
+    {
+      "id": "kaban-1A00500511-3-1",
+      "group": "kaban",
+      "model": "Kaban 650 LRF",
+      "name": "Марка 3 · mark3",
+      "kind": "Штатная · номинальная геометрия",
+      "pn": "1A00500511",
+      "path": "assets/kaban/rika-1A00500511-mark3-zoom1.png",
+      "original": "originals/kaban/1A00500511/mark3.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500511-3-1.png",
+      "preview_crop": [
+        399,
+        334,
+        560,
+        440
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "9e0cf1723da53cd65ddbbefb456be2988e6914ee2a19565e655a9dc9b12f2a87",
+      "preview_sha256": "6ab9b4073d66833c1710c369e28ea244e4766d5d68d248f05e23cf139beddbcb"
+    },
+    {
+      "id": "kaban-1A00500511-4-1",
+      "group": "kaban",
+      "model": "Kaban 650 LRF",
+      "name": "Марка 4 · mark4",
+      "kind": "Штатная · номинальная геометрия",
+      "pn": "1A00500511",
+      "path": "assets/kaban/rika-1A00500511-mark4-zoom1.png",
+      "original": "originals/kaban/1A00500511/mark4.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500511-4-1.png",
+      "preview_crop": [
+        423,
+        315,
+        536,
+        447
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "b4e897dc4c8ff3b3f120e7db4c2701adff33faae8c693f30c33d80d1cf9cc852",
+      "preview_sha256": "b61dc85d34dec9b11c3acc70f37561f0da1f39e30e094580719befd003ff24cd"
+    },
+    {
+      "id": "kaban-1A00500511-5-1",
+      "group": "kaban",
+      "model": "Kaban 650 LRF",
+      "name": "Марка 5 · mark5",
+      "kind": "Штатная + авторская правка ADR-0080",
+      "pn": "1A00500511",
+      "path": "assets/kaban/rika-1A00500511-mark5-zoom1.png",
+      "original": "originals/kaban/1A00500511/mark5.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500511-5-1.png",
+      "preview_crop": [
+        422,
+        333,
+        537,
+        454
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "f644bd9fbb39b64d51897512c366967ce57754ccb720a889f03d797b78443231",
+      "preview_sha256": "f0054dfd90a4392c913d5955a7a0290d4734aa7c53b47f131174680dae04ff67"
+    },
+    {
+      "id": "kaban-1A00500511-6-1",
+      "group": "kaban",
+      "model": "Kaban 650 LRF",
+      "name": "Марка 6 · mark6",
+      "kind": "Штатная · номинальная геометрия",
+      "pn": "1A00500511",
+      "path": "assets/kaban/rika-1A00500511-mark6-zoom1.png",
+      "original": "originals/kaban/1A00500511/mark6.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500511-6-1.png",
+      "preview_crop": [
+        449,
+        329,
+        510,
+        390
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "4cf47da613a303343c289a52dfabfaa8bd49b62b62343f3d1a4078fb54ab9483",
+      "preview_sha256": "b03f862315ba7a8d1ad3de3bed4ef4a1b2fdfb3b4f84bbe9dad392095511dc2f"
+    },
+    {
+      "id": "kaban-1A00500511-7-1",
+      "group": "kaban",
+      "model": "Kaban 650 LRF",
+      "name": "Кедр · mark7",
+      "kind": "Авторская",
+      "pn": "1A00500511",
+      "path": "assets/kaban/rika-1A00500511-mark7-zoom1.png",
+      "original": "originals/kaban/1A00500511/mark7.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500511-7-1.png",
+      "preview_crop": [
+        390,
+        301,
+        569,
+        454
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "6c09f10a5131557f1968b412f194b6f0fb8568c450f0f2a064725659a69e6de4",
+      "preview_sha256": "59892565e59618a3226d89ccc4b1b9a3687807904a0aed86da5e0d78de38434e"
+    },
+    {
+      "id": "kaban-1A00500511-7-2",
+      "group": "kaban",
+      "model": "Kaban 650 LRF",
+      "name": "Кедр · mark7",
+      "kind": "Авторская",
+      "pn": "1A00500511",
+      "path": "assets/kaban/rika-1A00500511-mark7-zoom2.png",
+      "original": "originals/kaban/1A00500511/mark7.json",
+      "zoom": 2,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500511-7-2.png",
+      "preview_crop": [
+        319,
+        266,
+        639,
+        516
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "d34df611f53fcbeb64fd007e87244da213f02013a69d4998dab73e0acb482cbb",
+      "preview_sha256": "64344a2425ddce7573af9cebb162184d4e8ee577e85f9310ee1660227c1cf96c"
+    },
+    {
+      "id": "kaban-1A00500511-8-1",
+      "group": "kaban",
+      "model": "Kaban 650 LRF",
+      "name": "Мил-крест · mark8 (имя JSON: Марка 7)",
+      "kind": "Авторская",
+      "pn": "1A00500511",
+      "path": "assets/kaban/rika-1A00500511-mark8-zoom1.png",
+      "original": "originals/kaban/1A00500511/mark8.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500511-8-1.png",
+      "preview_crop": [
+        393,
+        273,
+        566,
+        446
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "f543052aae75f50da223c43b712221da8fa3f5a7f829dbabb34a79e9788fa5ba",
+      "preview_sha256": "6ec6e5b27897ee3cefa02406b241f8d2c3bd09c9c75b813e7ef73cd3d50c42a6"
+    },
+    {
+      "id": "kaban-1A00500512-1-1",
+      "group": "kaban",
+      "model": "Kaban 650 LRF PRO",
+      "name": "Марка 1 · mark1",
+      "kind": "Штатная · номинальная геометрия",
+      "pn": "1A00500512",
+      "path": "assets/kaban/rika-1A00500512-mark1-zoom1.png",
+      "original": "originals/kaban/1A00500512/mark1.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500512-1-1.png",
+      "preview_crop": [
+        399,
+        279,
+        560,
+        440
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "80bfefe8e3d44109ba5610d4c2b8da92111c56bbbc675d9be8a3cfeca8195c39",
+      "preview_sha256": "8f2c643de867a3faf1fc180377adbf3ac7f2a8ae14106ee51d61597ab793d72f"
+    },
+    {
+      "id": "kaban-1A00500512-2-1",
+      "group": "kaban",
+      "model": "Kaban 650 LRF PRO",
+      "name": "Марка 2 · mark2",
+      "kind": "Штатная · номинальная геометрия",
+      "pn": "1A00500512",
+      "path": "assets/kaban/rika-1A00500512-mark2-zoom1.png",
+      "original": "originals/kaban/1A00500512/mark2.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500512-2-1.png",
+      "preview_crop": [
+        399,
+        334,
+        560,
+        440
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "5f1fd62ee899d439537c1b312da198a52f47ce8696ce8e7b3e9f3a35ed315d74",
+      "preview_sha256": "103468c83379a873f8362b21dbe3bf4264a6b5ff6571a4bb2ae957d998b65638"
+    },
+    {
+      "id": "kaban-1A00500512-3-1",
+      "group": "kaban",
+      "model": "Kaban 650 LRF PRO",
+      "name": "Марка 3 · mark3",
+      "kind": "Штатная · номинальная геометрия",
+      "pn": "1A00500512",
+      "path": "assets/kaban/rika-1A00500512-mark3-zoom1.png",
+      "original": "originals/kaban/1A00500512/mark3.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500512-3-1.png",
+      "preview_crop": [
+        399,
+        334,
+        560,
+        440
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "9e0cf1723da53cd65ddbbefb456be2988e6914ee2a19565e655a9dc9b12f2a87",
+      "preview_sha256": "6ab9b4073d66833c1710c369e28ea244e4766d5d68d248f05e23cf139beddbcb"
+    },
+    {
+      "id": "kaban-1A00500512-4-1",
+      "group": "kaban",
+      "model": "Kaban 650 LRF PRO",
+      "name": "Марка 4 · mark4",
+      "kind": "Штатная · номинальная геометрия",
+      "pn": "1A00500512",
+      "path": "assets/kaban/rika-1A00500512-mark4-zoom1.png",
+      "original": "originals/kaban/1A00500512/mark4.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500512-4-1.png",
+      "preview_crop": [
+        423,
+        315,
+        536,
+        447
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "b4e897dc4c8ff3b3f120e7db4c2701adff33faae8c693f30c33d80d1cf9cc852",
+      "preview_sha256": "b61dc85d34dec9b11c3acc70f37561f0da1f39e30e094580719befd003ff24cd"
+    },
+    {
+      "id": "kaban-1A00500512-5-1",
+      "group": "kaban",
+      "model": "Kaban 650 LRF PRO",
+      "name": "Марка 5 · mark5",
+      "kind": "Штатная + авторская правка ADR-0080",
+      "pn": "1A00500512",
+      "path": "assets/kaban/rika-1A00500512-mark5-zoom1.png",
+      "original": "originals/kaban/1A00500512/mark5.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500512-5-1.png",
+      "preview_crop": [
+        422,
+        333,
+        537,
+        454
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "f644bd9fbb39b64d51897512c366967ce57754ccb720a889f03d797b78443231",
+      "preview_sha256": "f0054dfd90a4392c913d5955a7a0290d4734aa7c53b47f131174680dae04ff67"
+    },
+    {
+      "id": "kaban-1A00500512-6-1",
+      "group": "kaban",
+      "model": "Kaban 650 LRF PRO",
+      "name": "Марка 6 · mark6",
+      "kind": "Штатная · номинальная геометрия",
+      "pn": "1A00500512",
+      "path": "assets/kaban/rika-1A00500512-mark6-zoom1.png",
+      "original": "originals/kaban/1A00500512/mark6.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500512-6-1.png",
+      "preview_crop": [
+        449,
+        329,
+        510,
+        390
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "4cf47da613a303343c289a52dfabfaa8bd49b62b62343f3d1a4078fb54ab9483",
+      "preview_sha256": "b03f862315ba7a8d1ad3de3bed4ef4a1b2fdfb3b4f84bbe9dad392095511dc2f"
+    },
+    {
+      "id": "kaban-1A00500512-7-1",
+      "group": "kaban",
+      "model": "Kaban 650 LRF PRO",
+      "name": "Кедр · mark7",
+      "kind": "Авторская",
+      "pn": "1A00500512",
+      "path": "assets/kaban/rika-1A00500512-mark7-zoom1.png",
+      "original": "originals/kaban/1A00500512/mark7.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500512-7-1.png",
+      "preview_crop": [
+        390,
+        301,
+        569,
+        454
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "6c09f10a5131557f1968b412f194b6f0fb8568c450f0f2a064725659a69e6de4",
+      "preview_sha256": "59892565e59618a3226d89ccc4b1b9a3687807904a0aed86da5e0d78de38434e"
+    },
+    {
+      "id": "kaban-1A00500512-7-2",
+      "group": "kaban",
+      "model": "Kaban 650 LRF PRO",
+      "name": "Кедр · mark7",
+      "kind": "Авторская",
+      "pn": "1A00500512",
+      "path": "assets/kaban/rika-1A00500512-mark7-zoom2.png",
+      "original": "originals/kaban/1A00500512/mark7.json",
+      "zoom": 2,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500512-7-2.png",
+      "preview_crop": [
+        319,
+        266,
+        639,
+        516
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "d34df611f53fcbeb64fd007e87244da213f02013a69d4998dab73e0acb482cbb",
+      "preview_sha256": "64344a2425ddce7573af9cebb162184d4e8ee577e85f9310ee1660227c1cf96c"
+    },
+    {
+      "id": "kaban-1A00500512-8-1",
+      "group": "kaban",
+      "model": "Kaban 650 LRF PRO",
+      "name": "Мил-крест · mark8 (имя JSON: Марка 7)",
+      "kind": "Авторская",
+      "pn": "1A00500512",
+      "path": "assets/kaban/rika-1A00500512-mark8-zoom1.png",
+      "original": "originals/kaban/1A00500512/mark8.json",
+      "zoom": 1,
+      "origin": "Рендер исходного каталога JSON",
+      "notes": "Точный rikaRenderReticle из редактора, нативный буфер 960×720, масштаб из таблицы данного PN. Не кадр прошивки.",
+      "preview": "previews/kaban-1A00500512-8-1.png",
+      "preview_crop": [
+        393,
+        273,
+        566,
+        446
+      ],
+      "canvas": [
+        960,
+        720
+      ],
+      "sha256": "f543052aae75f50da223c43b712221da8fa3f5a7f829dbabb34a79e9788fa5ba",
+      "preview_sha256": "6ec6e5b27897ee3cefa02406b241f8d2c3bd09c9c75b813e7ef73cd3d50c42a6"
+    },
+    {
+      "id": "lpr-1",
+      "group": "lpr",
+      "model": "RIX LPR L6R",
+      "name": "Тип 1",
+      "kind": "Штатная · активный Canvas",
+      "path": "assets/rix-lpr/rika-lpr-type1.png",
+      "original": "assets/rix-lpr/rika-lpr-type1.png",
+      "type": 1,
+      "zoom": 1,
+      "origin": "Восстановлено из активного QML Canvas",
+      "notes": "Исполнено неизменённое тело onPaint в браузерном Canvas; L6R, zoom_index=0, PiP выключен. Тип 9: начальные параметры Crossmenu.qml, не пользовательский сохранённый профиль. Qt и браузер могут сглаживать по-разному.",
+      "preview": "previews/lpr-1.png",
+      "preview_crop": [
+        606,
+        606,
+        675,
+        675
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "adfba7e5289e3c88a5927834577aacb95cda787b91fea5e1b1d5c6ba70baae8b",
+      "preview_sha256": "7663a13d28cd4ca7002ce01871eadba6a6d8f6facd8e0f8ebc69a7e4a434ef49"
+    },
+    {
+      "id": "lpr-2",
+      "group": "lpr",
+      "model": "RIX LPR L6R",
+      "name": "Тип 2",
+      "kind": "Штатная · активный Canvas",
+      "path": "assets/rix-lpr/rika-lpr-type2.png",
+      "original": "assets/rix-lpr/rika-lpr-type2.png",
+      "type": 2,
+      "zoom": 1,
+      "origin": "Восстановлено из активного QML Canvas",
+      "notes": "Исполнено неизменённое тело onPaint в браузерном Canvas; L6R, zoom_index=0, PiP выключен. Тип 9: начальные параметры Crossmenu.qml, не пользовательский сохранённый профиль. Qt и браузер могут сглаживать по-разному.",
+      "preview": "previews/lpr-2.png",
+      "preview_crop": [
+        476,
+        615,
+        805,
+        805
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "518bfbc8c4bd78ea238db23e6c662cface8f839a31cfdd0f675e0e3ee4537553",
+      "preview_sha256": "8ca77b0cd932dc6f203dcd7e8e28467d4b394f88162ce3dd7f9d8085978b217c"
+    },
+    {
+      "id": "lpr-3",
+      "group": "lpr",
+      "model": "RIX LPR L6R",
+      "name": "Тип 3",
+      "kind": "Штатная · активный Canvas",
+      "path": "assets/rix-lpr/rika-lpr-type3.png",
+      "original": "assets/rix-lpr/rika-lpr-type3.png",
+      "type": 3,
+      "zoom": 1,
+      "origin": "Восстановлено из активного QML Canvas",
+      "notes": "Исполнено неизменённое тело onPaint в браузерном Canvas; L6R, zoom_index=0, PiP выключен. Тип 9: начальные параметры Crossmenu.qml, не пользовательский сохранённый профиль. Qt и браузер могут сглаживать по-разному.",
+      "preview": "previews/lpr-3.png",
+      "preview_crop": [
+        491,
+        516,
+        790,
+        790
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "79601c229499929ad5e79bddcb9df86e4d3a0fa9b35d417e5c59c870fd87679d",
+      "preview_sha256": "c28007901a98f45a57a6b81b4ff53f9dcc75c2b0bcf85f0507b24bcad0ddae6d"
+    },
+    {
+      "id": "lpr-4",
+      "group": "lpr",
+      "model": "RIX LPR L6R",
+      "name": "Тип 4",
+      "kind": "Штатная · активный Canvas",
+      "path": "assets/rix-lpr/rika-lpr-type4.png",
+      "original": "assets/rix-lpr/rika-lpr-type4.png",
+      "type": 4,
+      "zoom": 1,
+      "origin": "Восстановлено из активного QML Canvas",
+      "notes": "Исполнено неизменённое тело onPaint в браузерном Canvas; L6R, zoom_index=0, PiP выключен. Тип 9: начальные параметры Crossmenu.qml, не пользовательский сохранённый профиль. Qt и браузер могут сглаживать по-разному.",
+      "preview": "previews/lpr-4.png",
+      "preview_crop": [
+        476,
+        476,
+        805,
+        805
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "ed749d87f3ec1a2082a37804239a105106493a0016e95468534b96c648e0c98f",
+      "preview_sha256": "80e56f5607b2bc301f122080bef0689390bfc3866ec51c99ade4797383526fc3"
+    },
+    {
+      "id": "lpr-5",
+      "group": "lpr",
+      "model": "RIX LPR L6R",
+      "name": "Тип 5",
+      "kind": "Штатная · активный Canvas",
+      "path": "assets/rix-lpr/rika-lpr-type5.png",
+      "original": "assets/rix-lpr/rika-lpr-type5.png",
+      "type": 5,
+      "zoom": 1,
+      "origin": "Восстановлено из активного QML Canvas",
+      "notes": "Исполнено неизменённое тело onPaint в браузерном Canvas; L6R, zoom_index=0, PiP выключен. Тип 9: начальные параметры Crossmenu.qml, не пользовательский сохранённый профиль. Qt и браузер могут сглаживать по-разному.",
+      "preview": "previews/lpr-5.png",
+      "preview_crop": [
+        571,
+        613,
+        710,
+        710
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "2e1215167d8f6d28c2b71f2448aec8f154273ad5e650b0b40213cb28a0899c9f",
+      "preview_sha256": "3d992d552d864290f66fee5acbf255ffa2f95e4388a104d9e43f233f136d55da"
+    },
+    {
+      "id": "lpr-6",
+      "group": "lpr",
+      "model": "RIX LPR L6R",
+      "name": "Тип 6",
+      "kind": "Штатная · активный Canvas",
+      "path": "assets/rix-lpr/rika-lpr-type6.png",
+      "original": "assets/rix-lpr/rika-lpr-type6.png",
+      "type": 6,
+      "zoom": 1,
+      "origin": "Восстановлено из активного QML Canvas",
+      "notes": "Исполнено неизменённое тело onPaint в браузерном Canvas; L6R, zoom_index=0, PiP выключен. Тип 9: начальные параметры Crossmenu.qml, не пользовательский сохранённый профиль. Qt и браузер могут сглаживать по-разному.",
+      "preview": "previews/lpr-6.png",
+      "preview_crop": [
+        561,
+        566,
+        720,
+        715
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "b461f2d01748b259f0bb79c974d7a4c8ef2b88d3f96424f491edeb2f68d86a15",
+      "preview_sha256": "8e02df3a39ce05809fde692702f0f6d181ffac74cccc0ad6294a10f8e21c1c31"
+    },
+    {
+      "id": "lpr-7",
+      "group": "lpr",
+      "model": "RIX LPR L6R",
+      "name": "Тип 7",
+      "kind": "Штатная · активный Canvas",
+      "path": "assets/rix-lpr/rika-lpr-type7.png",
+      "original": "assets/rix-lpr/rika-lpr-type7.png",
+      "type": 7,
+      "zoom": 1,
+      "origin": "Восстановлено из активного QML Canvas",
+      "notes": "Исполнено неизменённое тело onPaint в браузерном Canvas; L6R, zoom_index=0, PiP выключен. Тип 9: начальные параметры Crossmenu.qml, не пользовательский сохранённый профиль. Qt и браузер могут сглаживать по-разному.",
+      "preview": "previews/lpr-7.png",
+      "preview_crop": [
+        556,
+        556,
+        725,
+        725
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "745797c06bcb0c0eb168b7a998c21b53a7e467364718817bd201279bdb47eb34",
+      "preview_sha256": "f814e23ec5648b2a5368d8f34dc075822a20e7f318c7b35e40bdad0a8526b4b5"
+    },
+    {
+      "id": "lpr-8",
+      "group": "lpr",
+      "model": "RIX LPR L6R",
+      "name": "Тип 8",
+      "kind": "Штатная · активный Canvas",
+      "path": "assets/rix-lpr/rika-lpr-type8.png",
+      "original": "assets/rix-lpr/rika-lpr-type8.png",
+      "type": 8,
+      "zoom": 1,
+      "origin": "Восстановлено из активного QML Canvas",
+      "notes": "Исполнено неизменённое тело onPaint в браузерном Canvas; L6R, zoom_index=0, PiP выключен. Тип 9: начальные параметры Crossmenu.qml, не пользовательский сохранённый профиль. Qt и браузер могут сглаживать по-разному.",
+      "preview": "previews/lpr-8.png",
+      "preview_crop": [
+        491,
+        491,
+        790,
+        790
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "15bb2a23f237a741ded97dea490485568d589dc5a19b4e281235508b85806608",
+      "preview_sha256": "c902adb8c515ead2a9e80c9017d25374f32ee21638519fda015f9ea1e5b9018b"
+    },
+    {
+      "id": "lpr-9-cross",
+      "group": "lpr",
+      "model": "RIX LPR L6R",
+      "name": "Тип 9 · настраиваемая · кресты",
+      "kind": "Настраиваемая · пример исходных значений",
+      "path": "assets/rix-lpr/rika-lpr-type9-cross.png",
+      "original": "assets/rix-lpr/rika-lpr-type9-cross.png",
+      "type": 9,
+      "zoom": 1,
+      "origin": "Восстановлено из активного QML Canvas",
+      "notes": "Исполнено неизменённое тело onPaint в браузерном Canvas; L6R, zoom_index=0, PiP выключен. Тип 9: начальные параметры Crossmenu.qml, не пользовательский сохранённый профиль. Qt и браузер могут сглаживать по-разному.",
+      "preview": "previews/lpr-9-cross.png",
+      "preview_crop": [
+        550,
+        614,
+        730,
+        731
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "c2df6bdd364b7aca098213bf59c0f10f5a5ce1ac1dd8ba9ad0cd3aa997f720d8",
+      "preview_sha256": "c32a5a0ba461973be4a4ad584128891ff6bcfdd4c1afa2a811614ea514346506"
+    },
+    {
+      "id": "lpr-9-dot",
+      "group": "lpr",
+      "model": "RIX LPR L6R",
+      "name": "Тип 9 · настраиваемая · точки",
+      "kind": "Настраиваемая · пример исходных значений",
+      "path": "assets/rix-lpr/rika-lpr-type9-dot.png",
+      "original": "assets/rix-lpr/rika-lpr-type9-dot.png",
+      "type": 9,
+      "zoom": 1,
+      "origin": "Восстановлено из активного QML Canvas",
+      "notes": "Исполнено неизменённое тело onPaint в браузерном Canvas; L6R, zoom_index=0, PiP выключен. Тип 9: начальные параметры Crossmenu.qml, не пользовательский сохранённый профиль. Qt и браузер могут сглаживать по-разному.",
+      "preview": "previews/lpr-9-dot.png",
+      "preview_crop": [
+        550,
+        614,
+        730,
+        731
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "57d7953a2f5a006c07850c2b18aa207fced508a015473c9b8e637278e54fccbd",
+      "preview_sha256": "f1963c024321b3135e1ca6330c8946bd135065146c903bd684e2d2c4737cad67"
+    },
+    {
+      "id": "dbh-d12-1",
+      "group": "dbh",
+      "model": "RIX DBH D12",
+      "name": "Тип 1",
+      "kind": "Штатная · ARM64 → AWTK-геометрия",
+      "path": "assets/rix-dbh/rika-dbh-d12-type1.png",
+      "original": "originals/rix-dbh/rika-dbh-type-1.json",
+      "type": 1,
+      "zoom": 1,
+      "origin": "Восстановлено из UI и нативных обработчиков",
+      "notes": "Тип выбран оригинальной функцией on_reticle_type; геометрия при zoom=1 получена исполнением on_RX_All_Reticle_zoom. Белый цвет нормализован; браузерные скругления и Arial вместо AWTK-шрифта. Не побитовый растр прибора.",
+      "preview": "previews/dbh-d12-1.png",
+      "preview_crop": [
+        541,
+        615,
+        739,
+        739
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "2dd0f3ccca6b72439de25286ec6f444d2c0c2524dff54f81aa943ab4b1c98f57",
+      "preview_sha256": "f0f4a8ae1c407f82c7c60de8e425bde9e79134283bad92a63d6a75b0131db4fe"
+    },
+    {
+      "id": "dbh-d12-2",
+      "group": "dbh",
+      "model": "RIX DBH D12",
+      "name": "Тип 2",
+      "kind": "Штатная · ARM64 → AWTK-геометрия",
+      "path": "assets/rix-dbh/rika-dbh-d12-type2.png",
+      "original": "originals/rix-dbh/rika-dbh-type-2.json",
+      "type": 2,
+      "zoom": 1,
+      "origin": "Восстановлено из UI и нативных обработчиков",
+      "notes": "Тип выбран оригинальной функцией on_reticle_type; геометрия при zoom=1 получена исполнением on_RX_All_Reticle_zoom. Белый цвет нормализован; браузерные скругления и Arial вместо AWTK-шрифта. Не побитовый растр прибора.",
+      "preview": "previews/dbh-d12-2.png",
+      "preview_crop": [
+        547,
+        615,
+        733,
+        733
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "78764485ccd65aea65b2236420e546a2e0f809b50a9b6bc6cd808e35e2f00189",
+      "preview_sha256": "577a1ab11b301cae5386ec485e9931166275d3c498e177f4883e2d2c9d02796b"
+    },
+    {
+      "id": "dbh-d12-3",
+      "group": "dbh",
+      "model": "RIX DBH D12",
+      "name": "Тип 3",
+      "kind": "Штатная · ARM64 → AWTK-геометрия",
+      "path": "assets/rix-dbh/rika-dbh-d12-type3.png",
+      "original": "originals/rix-dbh/rika-dbh-type-3.json",
+      "type": 3,
+      "zoom": 1,
+      "origin": "Восстановлено из UI и нативных обработчиков",
+      "notes": "Тип выбран оригинальной функцией on_reticle_type; геометрия при zoom=1 получена исполнением on_RX_All_Reticle_zoom. Белый цвет нормализован; браузерные скругления и Arial вместо AWTK-шрифта. Не побитовый растр прибора.",
+      "preview": "previews/dbh-d12-3.png",
+      "preview_crop": [
+        579,
+        591,
+        701,
+        701
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "d9375a60a48b75c20671bca6e9336ee4bac31f639aa828363611d33e12e78a43",
+      "preview_sha256": "5ba83c12eb4d32a8c3f75b501bd7edd5233a811dd36c11a9553d5d475f088de4"
+    },
+    {
+      "id": "dbh-d12-4",
+      "group": "dbh",
+      "model": "RIX DBH D12",
+      "name": "Тип 4",
+      "kind": "Штатная · ARM64 → AWTK-геометрия",
+      "path": "assets/rix-dbh/rika-dbh-d12-type4.png",
+      "original": "originals/rix-dbh/rika-dbh-type-4.json",
+      "type": 4,
+      "zoom": 1,
+      "origin": "Восстановлено из UI и нативных обработчиков",
+      "notes": "Тип выбран оригинальной функцией on_reticle_type; геометрия при zoom=1 получена исполнением on_RX_All_Reticle_zoom. Белый цвет нормализован; браузерные скругления и Arial вместо AWTK-шрифта. Не побитовый растр прибора.",
+      "preview": "previews/dbh-d12-4.png",
+      "preview_crop": [
+        548,
+        608,
+        733,
+        733
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "e24880d7e199a6706a9820a3187515cddc97d946eaaf1a7f1343fa5079948a65",
+      "preview_sha256": "dfb8228306b05404ee478b82a1f4e3f18552cd4474833e690e080d54d21e3c95"
+    },
+    {
+      "id": "dbh-d12-5",
+      "group": "dbh",
+      "model": "RIX DBH D12",
+      "name": "Тип 5",
+      "kind": "Штатная · ARM64 → AWTK-геометрия",
+      "path": "assets/rix-dbh/rika-dbh-d12-type5.png",
+      "original": "originals/rix-dbh/rika-dbh-type-5.json",
+      "type": 5,
+      "zoom": 1,
+      "origin": "Восстановлено из UI и нативных обработчиков",
+      "notes": "Тип выбран оригинальной функцией on_reticle_type; геометрия при zoom=1 получена исполнением on_RX_All_Reticle_zoom. Белый цвет нормализован; браузерные скругления и Arial вместо AWTK-шрифта. Не побитовый растр прибора.",
+      "preview": "previews/dbh-d12-5.png",
+      "preview_crop": [
+        541,
+        541,
+        739,
+        739
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "940541be9969304a2982bb37a2f0bc4678b1df6a08f8aee4c18252637f02cd10",
+      "preview_sha256": "5172f39183b74fe58f9531acfa8717498186534f472bcb3e18c4a3ef3def8488"
+    },
+    {
+      "id": "dbh-d12-6",
+      "group": "dbh",
+      "model": "RIX DBH D12",
+      "name": "Тип 6",
+      "kind": "Штатная · ARM64 → AWTK-геометрия",
+      "path": "assets/rix-dbh/rika-dbh-d12-type6.png",
+      "original": "originals/rix-dbh/rika-dbh-type-6.json",
+      "type": 6,
+      "zoom": 1,
+      "origin": "Восстановлено из UI и нативных обработчиков",
+      "notes": "Тип выбран оригинальной функцией on_reticle_type; геометрия при zoom=1 получена исполнением on_RX_All_Reticle_zoom. Белый цвет нормализован; браузерные скругления и Arial вместо AWTK-шрифта. Не побитовый растр прибора.",
+      "preview": "previews/dbh-d12-6.png",
+      "preview_crop": [
+        603,
+        615,
+        677,
+        665
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "5c6a805136f1af7c53e3c7b2e1b4f6dc551244a11a9610b1abbd8cb995167936",
+      "preview_sha256": "e971cda54e2a13f58b2c183b613981c1043cce6a5778ad1d8e55272fce9cf01c"
+    },
+    {
+      "id": "dbh-d12-7",
+      "group": "dbh",
+      "model": "RIX DBH D12",
+      "name": "Тип 7",
+      "kind": "Штатная · ARM64 → AWTK-геометрия",
+      "path": "assets/rix-dbh/rika-dbh-d12-type7.png",
+      "original": "originals/rix-dbh/rika-dbh-type-7.json",
+      "type": 7,
+      "zoom": 1,
+      "origin": "Восстановлено из UI и нативных обработчиков",
+      "notes": "Тип выбран оригинальной функцией on_reticle_type; геометрия при zoom=1 получена исполнением on_RX_All_Reticle_zoom. Белый цвет нормализован; браузерные скругления и Arial вместо AWTK-шрифта. Не побитовый растр прибора.",
+      "preview": "previews/dbh-d12-7.png",
+      "preview_crop": [
+        522,
+        612,
+        758,
+        771
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "c3a972a954861d556007e692c73f55cd214bf22c58eed539e08b813b7298732c",
+      "preview_sha256": "6a0a280a533699ade066c919b91cbd2b6d78d4d2ef8e9e6dd54b8de98ebf48f1"
+    },
+    {
+      "id": "dbh-d12-8",
+      "group": "dbh",
+      "model": "RIX DBH D12",
+      "name": "Тип 8",
+      "kind": "Штатная · ARM64 → AWTK-геометрия",
+      "path": "assets/rix-dbh/rika-dbh-d12-type8.png",
+      "original": "originals/rix-dbh/rika-dbh-type-8.json",
+      "type": 8,
+      "zoom": 1,
+      "origin": "Восстановлено из UI и нативных обработчиков",
+      "notes": "Тип выбран оригинальной функцией on_reticle_type; геометрия при zoom=1 получена исполнением on_RX_All_Reticle_zoom. Белый цвет нормализован; браузерные скругления и Arial вместо AWTK-шрифта. Не побитовый растр прибора.",
+      "preview": "previews/dbh-d12-8.png",
+      "preview_crop": [
+        516,
+        614,
+        764,
+        764
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "ad55d857846e4e14d228df439c9f237dc317a62b8087ecc4921932d9a41328b6",
+      "preview_sha256": "23ccfc33eb8347142ebc4fc7503db36b1e9f3b4994504276d4b72c32d806a54a"
+    },
+    {
+      "id": "dbh-d6-1",
+      "group": "dbh",
+      "model": "RIX DBH D6",
+      "name": "Тип 1",
+      "kind": "Штатная · ARM64 → AWTK-геометрия",
+      "path": "assets/rix-dbh/rika-dbh-d6-type1.png",
+      "original": "originals/rix-dbh/rika-dbh-d6-type-1.json",
+      "type": 1,
+      "zoom": 1,
+      "origin": "Восстановлено из UI и нативных обработчиков",
+      "notes": "Тип выбран оригинальной функцией on_reticle_type; геометрия при zoom=1 получена исполнением on_RX_All_Reticle_zoom. Белый цвет нормализован; браузерные скругления и Arial вместо AWTK-шрифта. Не побитовый растр прибора.",
+      "preview": "previews/dbh-d6-1.png",
+      "preview_crop": [
+        496,
+        615,
+        784,
+        784
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "fb3018ef2ae9463b39df1ec380b3c57dda651774c4b38a78e0e64f9d63675075",
+      "preview_sha256": "2a77ffa6af7790c80f287f387a358a073cad5b18f7063fe888bab17fb809165b"
+    },
+    {
+      "id": "dbh-d6-2",
+      "group": "dbh",
+      "model": "RIX DBH D6",
+      "name": "Тип 2",
+      "kind": "Штатная · ARM64 → AWTK-геометрия",
+      "path": "assets/rix-dbh/rika-dbh-d6-type2.png",
+      "original": "originals/rix-dbh/rika-dbh-d6-type-2.json",
+      "type": 2,
+      "zoom": 1,
+      "origin": "Восстановлено из UI и нативных обработчиков",
+      "notes": "Тип выбран оригинальной функцией on_reticle_type; геометрия при zoom=1 получена исполнением on_RX_All_Reticle_zoom. Белый цвет нормализован; браузерные скругления и Arial вместо AWTK-шрифта. Не побитовый растр прибора.",
+      "preview": "previews/dbh-d6-2.png",
+      "preview_crop": [
+        505,
+        615,
+        775,
+        775
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "e05faeff1321fe55538d21db4c98f232c6935c9226424f1521304284011641bf",
+      "preview_sha256": "8be2d80e9f0fc031671d15c6769f43b0ee98c47e8e9a31c25b34ba53738199c1"
+    },
+    {
+      "id": "dbh-d6-3",
+      "group": "dbh",
+      "model": "RIX DBH D6",
+      "name": "Тип 3",
+      "kind": "Штатная · ARM64 → AWTK-геометрия",
+      "path": "assets/rix-dbh/rika-dbh-d6-type3.png",
+      "original": "originals/rix-dbh/rika-dbh-d6-type-3.json",
+      "type": 3,
+      "zoom": 1,
+      "origin": "Восстановлено из UI и нативных обработчиков",
+      "notes": "Тип выбран оригинальной функцией on_reticle_type; геометрия при zoom=1 получена исполнением on_RX_All_Reticle_zoom. Белый цвет нормализован; браузерные скругления и Arial вместо AWTK-шрифта. Не побитовый растр прибора.",
+      "preview": "previews/dbh-d6-3.png",
+      "preview_crop": [
+        556,
+        576,
+        724,
+        724
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "1fd01423fb9e1f6adb4556752ace02b63aba030d6f92d2c575980dd8a5d2146d",
+      "preview_sha256": "c6e4a06bb8da03dd65cd3c623dd91bd60c4ec2a73e6b2b9bcc5b9917644f7b41"
+    },
+    {
+      "id": "dbh-d6-4",
+      "group": "dbh",
+      "model": "RIX DBH D6",
+      "name": "Тип 4",
+      "kind": "Штатная · ARM64 → AWTK-геометрия",
+      "path": "assets/rix-dbh/rika-dbh-d6-type4.png",
+      "original": "originals/rix-dbh/rika-dbh-d6-type-4.json",
+      "type": 4,
+      "zoom": 1,
+      "origin": "Восстановлено из UI и нативных обработчиков",
+      "notes": "Тип выбран оригинальной функцией on_reticle_type; геометрия при zoom=1 получена исполнением on_RX_All_Reticle_zoom. Белый цвет нормализован; браузерные скругления и Arial вместо AWTK-шрифта. Не побитовый растр прибора.",
+      "preview": "previews/dbh-d6-4.png",
+      "preview_crop": [
+        506,
+        608,
+        774,
+        774
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "f557354b2deb45f08965a24ebe3f931a998970078722a369974e983709b575ef",
+      "preview_sha256": "edc3f5dd5087914f9afcf92e7be7199b8c23463d51b646d9d342478c60e75b05"
+    },
+    {
+      "id": "dbh-d6-5",
+      "group": "dbh",
+      "model": "RIX DBH D6",
+      "name": "Тип 5",
+      "kind": "Штатная · ARM64 → AWTK-геометрия",
+      "path": "assets/rix-dbh/rika-dbh-d6-type5.png",
+      "original": "originals/rix-dbh/rika-dbh-d6-type-5.json",
+      "type": 5,
+      "zoom": 1,
+      "origin": "Восстановлено из UI и нативных обработчиков",
+      "notes": "Тип выбран оригинальной функцией on_reticle_type; геометрия при zoom=1 получена исполнением on_RX_All_Reticle_zoom. Белый цвет нормализован; браузерные скругления и Arial вместо AWTK-шрифта. Не побитовый растр прибора.",
+      "preview": "previews/dbh-d6-5.png",
+      "preview_crop": [
+        496,
+        496,
+        784,
+        784
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "8fe3e08f6dd6db0664951e3ae5a7c24d303266c035d6ba58aa0e25ed21c34a9c",
+      "preview_sha256": "56956a0288e5d06e9db32832550084783255a782dc71e0a55d4fbdd6d888e556"
+    },
+    {
+      "id": "dbh-d6-6",
+      "group": "dbh",
+      "model": "RIX DBH D6",
+      "name": "Тип 6",
+      "kind": "Штатная · ARM64 → AWTK-геометрия",
+      "path": "assets/rix-dbh/rika-dbh-d6-type6.png",
+      "original": "originals/rix-dbh/rika-dbh-d6-type-6.json",
+      "type": 6,
+      "zoom": 1,
+      "origin": "Восстановлено из UI и нативных обработчиков",
+      "notes": "Тип выбран оригинальной функцией on_reticle_type; геометрия при zoom=1 получена исполнением on_RX_All_Reticle_zoom. Белый цвет нормализован; браузерные скругления и Arial вместо AWTK-шрифта. Не побитовый растр прибора.",
+      "preview": "previews/dbh-d6-6.png",
+      "preview_crop": [
+        596,
+        615,
+        684,
+        665
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "3aaf5a8ffc8c448acce73c81cd0a892ec1268236679e8763f2f6f8d8b5d61e94",
+      "preview_sha256": "f9419005741d7266da140904dc62f526de2acd73019b6b8c96eaf21ede821cd9"
+    },
+    {
+      "id": "dbh-d6-7",
+      "group": "dbh",
+      "model": "RIX DBH D6",
+      "name": "Тип 7",
+      "kind": "Штатная · ARM64 → AWTK-геометрия",
+      "path": "assets/rix-dbh/rika-dbh-d6-type7.png",
+      "original": "originals/rix-dbh/rika-dbh-d6-type-7.json",
+      "type": 7,
+      "zoom": 1,
+      "origin": "Восстановлено из UI и нативных обработчиков",
+      "notes": "Тип выбран оригинальной функцией on_reticle_type; геометрия при zoom=1 получена исполнением on_RX_All_Reticle_zoom. Белый цвет нормализован; браузерные скругления и Arial вместо AWTK-шрифта. Не побитовый растр прибора.",
+      "preview": "previews/dbh-d6-7.png",
+      "preview_crop": [
+        466,
+        612,
+        814,
+        834
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "91e430a4426885d16c5ea0b7ea9abe6ed83e65409a625f7d8e350b294b5bdfc3",
+      "preview_sha256": "94f67b5e50a8279204875df4dff86ed9a6e7b69381fb384987a6fa86ef5ad88b"
+    },
+    {
+      "id": "dbh-d6-8",
+      "group": "dbh",
+      "model": "RIX DBH D6",
+      "name": "Тип 8",
+      "kind": "Штатная · ARM64 → AWTK-геометрия",
+      "path": "assets/rix-dbh/rika-dbh-d6-type8.png",
+      "original": "originals/rix-dbh/rika-dbh-d6-type-8.json",
+      "type": 8,
+      "zoom": 1,
+      "origin": "Восстановлено из UI и нативных обработчиков",
+      "notes": "Тип выбран оригинальной функцией on_reticle_type; геометрия при zoom=1 получена исполнением on_RX_All_Reticle_zoom. Белый цвет нормализован; браузерные скругления и Arial вместо AWTK-шрифта. Не побитовый растр прибора.",
+      "preview": "previews/dbh-d6-8.png",
+      "preview_crop": [
+        456,
+        614,
+        824,
+        823
+      ],
+      "canvas": [
+        1280,
+        1280
+      ],
+      "sha256": "b29cc682a6ee29f7826c352242ad329a5489c918c42f4fccc897f467c1d1dce9",
+      "preview_sha256": "8fe864365dbfd608b1c3661529c1ba38b944c1ffe33dfe17143f7330f8afbce5"
+    }
+  ],
+  "dbh_backgrounds": [
+    {
+      "path": "originals/rix-dbh/RX_bg_reticle1.png",
+      "sha256": "06faf7e3c7d89228454be7b6f21271753bc4452c28f6b483447a76dd8342a27e",
+      "models": [
+        "DBH D12 V1.2.8",
+        "DBH D6 V1.2.14"
+      ],
+      "role": "Menu background only, not the reticle drawing"
+    },
+    {
+      "path": "originals/rix-dbh/RX_bg_reticle2.png",
+      "sha256": "02bccbab4faffc329e4ec72c0b542b6aee85a529fff74d9894057a5d845409c3",
+      "models": [
+        "DBH D12 V1.2.8",
+        "DBH D6 V1.2.14"
+      ],
+      "role": "Menu background only, not the reticle drawing"
+    },
+    {
+      "path": "originals/rix-dbh/RX_bg_reticle3.png",
+      "sha256": "e28a836013459da128918d22470293c5488dc0d2fd3d125d911668efac78ac5c",
+      "models": [
+        "DBH D12 V1.2.8",
+        "DBH D6 V1.2.14"
+      ],
+      "role": "Menu background only, not the reticle drawing"
+    },
+    {
+      "path": "originals/rix-dbh/RX_bg_reticle4.png",
+      "sha256": "761ed550a8421b7180d181b5c7059d4e601e492152c15e3353ecc61e0164d9b6",
+      "models": [
+        "DBH D12 V1.2.8",
+        "DBH D6 V1.2.14"
+      ],
+      "role": "Menu background only, not the reticle drawing"
+    },
+    {
+      "path": "originals/rix-dbh/RX_bg_reticle5.png",
+      "sha256": "5ecebbf9d08b997832bf57e426f7d07e829a16618ef609caaf75f850a26d1a02",
+      "models": [
+        "DBH D12 V1.2.8",
+        "DBH D6 V1.2.14"
+      ],
+      "role": "Menu background only, not the reticle drawing"
+    },
+    {
+      "path": "originals/rix-dbh/RX_bg_reticle6.png",
+      "sha256": "3c718ec3d86037ff0cf17c21703c761c89a90b9b7307d349a09431bf6a43be58",
+      "models": [
+        "DBH D12 V1.2.8",
+        "DBH D6 V1.2.14"
+      ],
+      "role": "Menu background only, not the reticle drawing"
+    },
+    {
+      "path": "originals/rix-dbh/RX_bg_reticle7.png",
+      "sha256": "a3e90f45c7a2b857d89ca17893d2e85093e51551879678e4251abb42f4f3fa52",
+      "models": [
+        "DBH D12 V1.2.8",
+        "DBH D6 V1.2.14"
+      ],
+      "role": "Menu background only, not the reticle drawing"
+    },
+    {
+      "path": "originals/rix-dbh/RX_bg_reticle8.png",
+      "sha256": "29f8c170159298a0124ff2894548c1d663b1c51ac70aecc453ae19cbe6c8e96d",
+      "models": [
+        "DBH D12 V1.2.8",
+        "DBH D6 V1.2.14"
+      ],
+      "role": "Menu background only, not the reticle drawing"
+    }
+  ],
+  "lpr_inactive_pngs": {
+    "archive": "originals/rix-lpr/rika-inactive-png-originals.zip",
+    "count": 368,
+    "files": [
+      {
+        "path": "L12_cross5_8/1_2/MOA/5_black_1.0x.png",
+        "sha256": "5c1c3fa5e2b3bcb4fc51e00260abfddb4739e4fc92d466b369c9e62db8c6bf44"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/5_black_1.2x.png",
+        "sha256": "72269a92dd67cd42c1efafa720fccd087e1f1c019900a1a49f952bf2af389c88"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/5_black_1.5x.png",
+        "sha256": "2854642963b5c63338c47585d4268125d7c811858c833ccb8b6b973bb91bc4fb"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/5_black_1.8x.png",
+        "sha256": "2854642963b5c63338c47585d4268125d7c811858c833ccb8b6b973bb91bc4fb"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/5_green_1.0x.png",
+        "sha256": "b750b0d0d50b1684e4f8a768d2b7476f0a27b6b17903f8dee99c924e2e13e959"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/5_green_1.2x.png",
+        "sha256": "bacab5e13abcc6273e9b59c44ed16d5a4f541fcca10c5536311381fce0637730"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/5_green_1.5x.png",
+        "sha256": "117208818e55e4c1681447f947fea0c7baf6c418d30879b6d5d2d986af6b2ab2"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/5_green_1.8x.png",
+        "sha256": "117208818e55e4c1681447f947fea0c7baf6c418d30879b6d5d2d986af6b2ab2"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/5_red_1.0x.png",
+        "sha256": "c7e02514fe45af0731a2c5beb35c2b3b448b29d14b1c44a127117b2b2d010faa"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/5_red_1.2x.png",
+        "sha256": "5a9baa787a3c75bd837f73095d9b3b51e94974a1a38efc9187a7d9f36f2eb2ed"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/5_red_1.5x.png",
+        "sha256": "e654262ba1938d3d1b4b22014139895df377c369332c36db5c710d95ac497b95"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/5_red_1.8x.png",
+        "sha256": "e654262ba1938d3d1b4b22014139895df377c369332c36db5c710d95ac497b95"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/5_white_1.0x.png",
+        "sha256": "da626c7e9d4f0b31fc31443c0418e5aeface72c299b3d1dc19b8e59f392e80fc"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/5_white_1.2x.png",
+        "sha256": "2d6e0f00a327e4ba013cfe7d5e0c500e257a143e038b832b1292d576e414158c"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/5_white_1.5x.png",
+        "sha256": "5777fb20100f24cf536bc46c4da75f9276934a4f722f7cb0dcb4dd4884386276"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/5_white_1.8x.png",
+        "sha256": "5777fb20100f24cf536bc46c4da75f9276934a4f722f7cb0dcb4dd4884386276"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/6_black_1.0x.png",
+        "sha256": "4d4f9a2bbed53fa426c2874086b2c906bf50ca5013a5ded78b80263cc66ccb08"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/6_black_1.2x.png",
+        "sha256": "fd60bc7f9f4da36a3356eb26f6b425d6e519c0a7ba2eb499ef23fea1931053aa"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/6_black_1.5x.png",
+        "sha256": "1368dea7c370352aaa85448b59c66d4df77697e531e90d3a11ed2e711503a6b8"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/6_black_1.8x.png",
+        "sha256": "1368dea7c370352aaa85448b59c66d4df77697e531e90d3a11ed2e711503a6b8"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/6_green_1.0x.png",
+        "sha256": "d40821ad5c47383f739b8f2f2fd69afb2261dae1eae6433f51f610a241fc23ac"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/6_green_1.2x.png",
+        "sha256": "2ab88cc66bac75b32f9a2887fafdc65b2c26bf6ba4b12a04b64b9186231873d6"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/6_green_1.5x.png",
+        "sha256": "a571bc86b16369288e190e77bc359e25ab41b8a9ff218d4bb36aa4798fe25e4a"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/6_green_1.8x.png",
+        "sha256": "a571bc86b16369288e190e77bc359e25ab41b8a9ff218d4bb36aa4798fe25e4a"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/6_red_1.0x.png",
+        "sha256": "61f59c3252d5fde83ba2bf8e4562bd9c6f47e9db574ac8f47077f593393eac9e"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/6_red_1.2x.png",
+        "sha256": "292938a79486bad99ff9e1c23d75f75a4cb4c502784c15bc5054aff6d24ee256"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/6_red_1.5x.png",
+        "sha256": "e087b15bb9ba64542439e3893feda5e8739b7c44baa80f5420b489718b4a2f3d"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/6_red_1.8x.png",
+        "sha256": "e087b15bb9ba64542439e3893feda5e8739b7c44baa80f5420b489718b4a2f3d"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/6_white_1.0x.png",
+        "sha256": "8fd1f9a68207f6c767ce6db34989d54bf392330a2e7f637c10512168b12eeef2"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/6_white_1.2x.png",
+        "sha256": "c024818c7b401a726c0e9305183d414a5f5020dc10251964f5f6b1e108fb2b82"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/6_white_1.5x.png",
+        "sha256": "3f828dc37a8eebb84a3b0e0f1c395251b31b10f0716b05db727bc29f6ad538dd"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/6_white_1.8x.png",
+        "sha256": "3f828dc37a8eebb84a3b0e0f1c395251b31b10f0716b05db727bc29f6ad538dd"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/7_black_1.0x.png",
+        "sha256": "7d3a14fe036c637baca9a5ef0f562fe726d32db281a812f3fc589e0e460be3fd"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/7_black_1.2x.png",
+        "sha256": "e11b401013dd5b4864b0eb4a5935b79352bfb2d9ad068b1b0f5de58aaafcf3d7"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/7_black_1.5x.png",
+        "sha256": "01176ce4b4f36d65d731867ff01615cf1d370928d50fe64f11d437f475eb1bf3"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/7_black_1.8x.png",
+        "sha256": "01176ce4b4f36d65d731867ff01615cf1d370928d50fe64f11d437f475eb1bf3"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/7_green_1.0x.png",
+        "sha256": "75f9e278a9cfdc945457504ea835fac7c81524a7287f8d8feb5e28ff93fe53c9"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/7_green_1.2x.png",
+        "sha256": "5e6e431017c316f1e98b44e4473c0b7232b50b8bb26b05aa26f2c286541e013c"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/7_green_1.5x.png",
+        "sha256": "d289f918754c4343e4b6942117b5b988158fa9f26d7e8b56e41f85e8e7e39c5f"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/7_green_1.8x.png",
+        "sha256": "d289f918754c4343e4b6942117b5b988158fa9f26d7e8b56e41f85e8e7e39c5f"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/7_red_1.0x.png",
+        "sha256": "1a7e03c32f6f229b9808150773d2a7d660fe5766d491e56822f40771ac644500"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/7_red_1.2x.png",
+        "sha256": "450f00768adeb686eb6c65f9a69b5c7ecab2ac84bced30b2684269dba987f5f7"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/7_red_1.5x.png",
+        "sha256": "fce85d9eda4b7a73d9a9e6a477131919c5a393ea5da8de4f779ebf65cd215be4"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/7_red_1.8x.png",
+        "sha256": "fce85d9eda4b7a73d9a9e6a477131919c5a393ea5da8de4f779ebf65cd215be4"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/7_white_1.0x.png",
+        "sha256": "6331f5deacc596399e15f222445af77dc769db30f26bfdb6ce4cb30abf896848"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/7_white_1.2x.png",
+        "sha256": "c8551d911c7713ebfd95f6203d93178954023e39c5802d3a70d2a70b3713ca3f"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/7_white_1.5x.png",
+        "sha256": "7916a7180e4673099d10c4c29561b7da65275e0da228317ddaddfca5fae9d959"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/7_white_1.8x.png",
+        "sha256": "7916a7180e4673099d10c4c29561b7da65275e0da228317ddaddfca5fae9d959"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/8_black_1.0x.png",
+        "sha256": "ddd246ed04720982f3daa52714e31c5169752710c13ecb9376736851db0a420b"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/8_black_1.2x.png",
+        "sha256": "ae25a48ed6ec528545bc78e0385cc16e0566acf1bdc0217969b12d59fcbfda69"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/8_black_1.5x.png",
+        "sha256": "bf0436504e183b0fb73e86ed2b6d1cf506a3a39f7588455cc80705948e8a5ceb"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/8_black_1.8x.png",
+        "sha256": "bf0436504e183b0fb73e86ed2b6d1cf506a3a39f7588455cc80705948e8a5ceb"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/8_green_1.0x.png",
+        "sha256": "ee8b2c95693f6a3a14fb53e83a6f9a5694fcb77658ef3e01344439c2836cea7c"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/8_green_1.2x.png",
+        "sha256": "a7c5347b12d0593e6be6ed30127c5f6f4b369807e87976598eb7b8c85e9907f5"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/8_green_1.5x.png",
+        "sha256": "542eb6a5864bf26c88299863b91c7f6f23271d0f641b8b480235cbfb280f33c8"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/8_green_1.8x.png",
+        "sha256": "542eb6a5864bf26c88299863b91c7f6f23271d0f641b8b480235cbfb280f33c8"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/8_red_1.0x.png",
+        "sha256": "1757f93e2eb698f668327eaec06f7b39ec30582ae8391359eb2cc0e7eaae9b3b"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/8_red_1.2x.png",
+        "sha256": "03588fda0cd542eece62fbeb4cf2d38c8ebd0209b22c18f876b5dcc62c09a7b6"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/8_red_1.5x.png",
+        "sha256": "e13d970c645622fa96a4788fd38527527e1d038c13c469b7bd9f77ea9f04c301"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/8_red_1.8x.png",
+        "sha256": "e13d970c645622fa96a4788fd38527527e1d038c13c469b7bd9f77ea9f04c301"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/8_white_1.0x.png",
+        "sha256": "a8d6ab7f7e998bfa32167431b8305b53a74583409cc807c8ef0ba6f68124e46e"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/8_white_1.2x.png",
+        "sha256": "bc598d49d025bf739e95abcbfc19c75d6e4c82f23884d5e7b5a9c399c81d6870"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/8_white_1.5x.png",
+        "sha256": "662055a26de83a957e6c9ed8ea840e0f4a7b361d10a9b2c2e57bac7ec2ee144d"
+      },
+      {
+        "path": "L12_cross5_8/1_2/MOA/8_white_1.8x.png",
+        "sha256": "662055a26de83a957e6c9ed8ea840e0f4a7b361d10a9b2c2e57bac7ec2ee144d"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/5_black_1.0x.png",
+        "sha256": "6fe999a4fd40e6c85eec9ed4ca8adc72eab35f471f5e1281706dda7a58b40b8e"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/5_black_1.2x.png",
+        "sha256": "8fcb8b4607f7cc3a4de8f3259fb3975731d1204e7dd0d218f780d542322b1bbd"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/5_black_1.5x.png",
+        "sha256": "f424f8d51b45ba23a72a4a8c2cb56270c06ce51af8765496e6d9fa5c0d2d33cc"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/5_black_1.8x.png",
+        "sha256": "f424f8d51b45ba23a72a4a8c2cb56270c06ce51af8765496e6d9fa5c0d2d33cc"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/5_green_1.0x.png",
+        "sha256": "ccc16a12216f4bda4f00f03fea69a719a88703b04c5029a393b3d18aee4125fd"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/5_green_1.2x.png",
+        "sha256": "50559050893ff826ecac8401ac42213443a34bf066e9654068bc0718063553b1"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/5_green_1.5x.png",
+        "sha256": "ad9f1a1f197c03f84c0118f524c744f1ea61b4058348f6797b9d738adc1dc9b2"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/5_green_1.8x.png",
+        "sha256": "ad9f1a1f197c03f84c0118f524c744f1ea61b4058348f6797b9d738adc1dc9b2"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/5_red_1.0x.png",
+        "sha256": "511664b0d2fd11aefa14fbf3e7f463019fd6d95b3a92f2a82a33c54c567b28db"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/5_red_1.2x.png",
+        "sha256": "5a0ecdac06b64a600fcf5352729e9bdfe5c12003156636d7184fe10feb6c39e8"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/5_red_1.5x.png",
+        "sha256": "9a19c5ceb07dadd551d777392eed985021a44581761ffee3a12453ce417b75de"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/5_red_1.8x.png",
+        "sha256": "9a19c5ceb07dadd551d777392eed985021a44581761ffee3a12453ce417b75de"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/5_white_1.0x.png",
+        "sha256": "68e3f4e23436f448a430f5586b9363a7039dc12d59906cc9fab9324f410174e5"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/5_white_1.2x.png",
+        "sha256": "fdc8ad30eba1f4fa47a41d90042abe5f75fccee235e3a288dc08874da968eb9e"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/5_white_1.5x.png",
+        "sha256": "c1859b89f18cae548b95bc1637f738afa5c13eaa4ea3de5a682aeeb4e3913658"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/5_white_1.8x.png",
+        "sha256": "c1859b89f18cae548b95bc1637f738afa5c13eaa4ea3de5a682aeeb4e3913658"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/6_black_1.0x.png",
+        "sha256": "515892d44858dbf21bda0a5f20bd1fbbd8c085525fe00b4b5e24e473db1833c2"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/6_black_1.2x.png",
+        "sha256": "f74ce342f5802dad7e67af896b8b7b50865411511aa8213f18888ce87fa6fc6f"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/6_black_1.5x.png",
+        "sha256": "cc97be40ff80a2aa7ac052aa8b739603b5b2a4a8f8784729bf5915f9c2a98e16"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/6_black_1.8x.png",
+        "sha256": "cc97be40ff80a2aa7ac052aa8b739603b5b2a4a8f8784729bf5915f9c2a98e16"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/6_green_1.0x.png",
+        "sha256": "db10f7510309e7ab0af80b151e4807661170ae096becd22693bd73f576282ad9"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/6_green_1.2x.png",
+        "sha256": "02455ad0a819d2cb6fa69e49f7f0c99656d4ef5f5fec38b50485f529f84a2fc7"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/6_green_1.5x.png",
+        "sha256": "5c9d3c27b9afe2ab004bb6b3c3fb7d731196daef8274ee036e88548da6280ecf"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/6_green_1.8x.png",
+        "sha256": "5c9d3c27b9afe2ab004bb6b3c3fb7d731196daef8274ee036e88548da6280ecf"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/6_red_1.0x.png",
+        "sha256": "bb39f8e1f74e785a8d2dc92009c7f574e9cbb5b9448d0e849ff9d70636a0eedb"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/6_red_1.2x.png",
+        "sha256": "84cda99a7707ea78ae99129f357ebdd5d8d20f03d2ccf160847ab20151c7b44a"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/6_red_1.5x.png",
+        "sha256": "aabe9a2b8b3d2aa4ada279b110921eb110245a5389b9a10c7c306c3080cd5c1b"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/6_red_1.8x.png",
+        "sha256": "aabe9a2b8b3d2aa4ada279b110921eb110245a5389b9a10c7c306c3080cd5c1b"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/6_white_1.0x.png",
+        "sha256": "489a30ef93c1eaa0d53c79ccb1e7b081d97a466b3886ea7afe9eac8499256346"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/6_white_1.2x.png",
+        "sha256": "4b634dd6eb7d873160b455b808650b649df544c21f1e38ce4541e7c3764b195c"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/6_white_1.5x.png",
+        "sha256": "437cdae7237bc6811a21d6580573ed216ff6ec57e513104daaabcdd04abb5346"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/6_white_1.8x.png",
+        "sha256": "437cdae7237bc6811a21d6580573ed216ff6ec57e513104daaabcdd04abb5346"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/7_black_1.0x.png",
+        "sha256": "148a39dec4e541cb7d75c3ced65a5ad27d43425282f4c7d9e619fd9c10f12084"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/7_black_1.2x.png",
+        "sha256": "544910386a88361b1931146619ca4a27214f3695f7812e12a32fd29fa76292f3"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/7_black_1.5x.png",
+        "sha256": "dafc9c138f4c4cd799b481949ffe5c0d269a351d2bad4fbb4635b55e1ff21212"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/7_black_1.8x.png",
+        "sha256": "dafc9c138f4c4cd799b481949ffe5c0d269a351d2bad4fbb4635b55e1ff21212"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/7_green_1.0x.png",
+        "sha256": "c724e034a7c6bc5e9ae5f1880b40247b96172e479fbfaa71e8d252675e3cb93c"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/7_green_1.2x.png",
+        "sha256": "a4c70a95a7e3de3ea6f43d3948306000ad525cda2db5d35d1a41394d108e707c"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/7_green_1.5x.png",
+        "sha256": "17d5dc2ade4f3040bade841f1960bade75fda6e28637992eb80535f57b29320b"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/7_green_1.8x.png",
+        "sha256": "17d5dc2ade4f3040bade841f1960bade75fda6e28637992eb80535f57b29320b"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/7_red_1.0x.png",
+        "sha256": "eed68fe1bb33e6277b93cc8f45271b5f8fab3532abe87db846053f3f1e191853"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/7_red_1.2x.png",
+        "sha256": "e8cae89dc2fc2c0e2ff2aa16558151cbb34e41e2002c89fd199327932ac90fed"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/7_red_1.5x.png",
+        "sha256": "80db6e484ca267d714e528adc9cf1aafc717e08b2f6d7950b90dd925392e41ad"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/7_red_1.8x.png",
+        "sha256": "80db6e484ca267d714e528adc9cf1aafc717e08b2f6d7950b90dd925392e41ad"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/7_white_1.0x.png",
+        "sha256": "7b340b7161b0cdf9713936bf4c69ac043bcc6362b1ea8466f0b5ae353193583e"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/7_white_1.2x.png",
+        "sha256": "725b741c8c1f20f35d5b59f854b54bf278f0e623dce53a40dd63fdbce77cd6b4"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/7_white_1.5x.png",
+        "sha256": "ab7eed76d9002b651bf64ea8dfb6a08b7acc6a04970016916226f54612c79a2f"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/7_white_1.8x.png",
+        "sha256": "ab7eed76d9002b651bf64ea8dfb6a08b7acc6a04970016916226f54612c79a2f"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/8_black_1.0x.png",
+        "sha256": "4440cba775fe162de2bd2c18d39a6f89a9df1e4c64c44e97502cb5f2d9c5c6fe"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/8_black_1.2x.png",
+        "sha256": "6c295719c64d37bc5d4a11f3141efa11b0d94f5ac2302642d2318d0c84e3fb21"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/8_black_1.5x.png",
+        "sha256": "aebff77816aee57f4ed984636f70e8b9ba36d30b62870ecb1d51ab7a42f2729d"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/8_black_1.8x.png",
+        "sha256": "aebff77816aee57f4ed984636f70e8b9ba36d30b62870ecb1d51ab7a42f2729d"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/8_green_1.0x.png",
+        "sha256": "7d00f4228dcdb40c28ee77d8caee8db82bac7ad9c9e7ddcfa6defa9c8edb204c"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/8_green_1.2x.png",
+        "sha256": "27bff7df39d21bc2307364a1b7162300f6cbdc3da033899568bdff4b44ef7aba"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/8_green_1.5x.png",
+        "sha256": "3767c80878df1cad1370cb0bb2a610e55a2e3996fab1c7dc8584249e51a15d39"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/8_green_1.8x.png",
+        "sha256": "3767c80878df1cad1370cb0bb2a610e55a2e3996fab1c7dc8584249e51a15d39"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/8_red_1.0x.png",
+        "sha256": "7bbf99eb715e6f746621ef705a91fc34e7bfd3e6cdefa0ac451d0d625ed7db5d"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/8_red_1.2x.png",
+        "sha256": "fcd695ac716cc98001d272098380512fd775e1a792423b67588e4aa2f4c9d627"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/8_red_1.5x.png",
+        "sha256": "63739ffc31ccd801469675f9800e398b3adb90bb01387f2ad285f7d860d408d8"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/8_red_1.8x.png",
+        "sha256": "63739ffc31ccd801469675f9800e398b3adb90bb01387f2ad285f7d860d408d8"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/8_white_1.0x.png",
+        "sha256": "edc4989f65fdcffd6f101ea508f546c1f630946c083a5a43057ed375d0d85dd6"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/8_white_1.2x.png",
+        "sha256": "b42606832742f73572b9675796749219d9e2e744df99428b01df32251fe96af0"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/8_white_1.5x.png",
+        "sha256": "79ad008b81c87166b7721d0bc0b39df1335602ef91acd185536ca65265579120"
+      },
+      {
+        "path": "L12_cross5_8/1_2/mil/8_white_1.8x.png",
+        "sha256": "79ad008b81c87166b7721d0bc0b39df1335602ef91acd185536ca65265579120"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/5_black_2.2x.png",
+        "sha256": "81ad047cdd6918b51a3a7441ce1c32168bc2fb160c108b00a68bc741abb940fd"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/5_black_2.5x.png",
+        "sha256": "ef4110d882239f5e3671c1a26e7d3368161c68a8bf6a52243bd5099cfbf1221c"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/5_green_2.2x.png",
+        "sha256": "b826f37ab5d8352e92dfe3db079c6eac7d5d9ac90e1a3a0be84ad19c15b0e709"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/5_green_2.5x.png",
+        "sha256": "68c9f3e9f9346aa196b535bccf0ee65ad8478bbed3f7ceb64ad51d4338a33c4a"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/5_red_2.2x.png",
+        "sha256": "42011f459ac9b1a92e6087ff6ef0d0b07b2b92bb57b322603f3e90e3844386a9"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/5_red_2.5x.png",
+        "sha256": "9099f5acef65b0d6ecfa49b27d1d9b4041dcc68de064a465e9506b3a1669f30f"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/5_white_2.2x.png",
+        "sha256": "3723396924fbd2f11a811c04cf3719c8cca2a4f38aa5e6abec015ff01825b8f5"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/5_white_2.5x.png",
+        "sha256": "9b98b017fd917282266f3289e7407452dae0c6f0d99984f84a78d3aef051a0d1"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/6_black_2.2x.png",
+        "sha256": "7c459578e213528d97057b6ab20864c96673d972c021a14cee007b3467723696"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/6_black_2.5x.png",
+        "sha256": "dedc37d91d38e49aeb1f6d8cb8a21e26fae395d9b8f78a91608eb152d62ba77c"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/6_green_2.2x.png",
+        "sha256": "cd32b64f326e8640e84724111a396be681df1bf4060dd01492c5dfcfb77ef005"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/6_green_2.5x.png",
+        "sha256": "0a7b976b59ab288d908712d7967c1d2865097a1b2755fd79a6c7b41f7a15606d"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/6_red_2.2x.png",
+        "sha256": "03cdf6644c6088d585df7d512e8c7e081cdfd6950d27cb8fbd9b1df93b9f41c3"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/6_red_2.5x.png",
+        "sha256": "e987f90c7d0356cef0591fa498809dd9bb500f73596d3367c1de20692e78e909"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/6_white_2.2x.png",
+        "sha256": "f77e846b70c739fb1892238c9bde4fa6f2477abed007a2eea6fa7c16133bcdd7"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/6_white_2.5x.png",
+        "sha256": "c791201a1c5d3175515a663c909c27405183ef383b8b6bbd95b59f12898ea0f2"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/7_black_2.2x.png",
+        "sha256": "c5b02543655c1e36c03d964eca5162d7dcee7b8fd49cdb75c8178096316f09ac"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/7_black_2.5x.png",
+        "sha256": "8afbd271ee7e2bed2d2d42932e496f058f9d222217779864efc3b3258fe03484"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/7_green_2.2x.png",
+        "sha256": "3f51947480c6fd5084eab9219800f96f981cc5877ab2bc7dd2746d27489d131d"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/7_green_2.5x.png",
+        "sha256": "e0f6409638b534d550199998d4699335dc8eb6a813bf345dd42d5ee0c4232b70"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/7_red_2.2x.png",
+        "sha256": "8d3929cf50433ff798996357524aa76b664d29671114893feb8f1142615e1404"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/7_red_2.5x.png",
+        "sha256": "2c9d53fb7ba38bb469df7b1f5b2847b96737048b462ee12e31c38c408f2acae4"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/7_white_2.2x.png",
+        "sha256": "be965875ebf9491f4d5bcde63b1b5ef78818131ef5102f5cb0e56e9af5c985e9"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/7_white_2.5x.png",
+        "sha256": "a4b2a23911f0e1dcbe349b9a15bde50022c119c74df2caa716970d437436b78b"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/8_black_2.2x.png",
+        "sha256": "3d5ea72a17286f3d6ceb0a72efee492f095234e6518acad472716a4bdff82617"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/8_black_2.5x.png",
+        "sha256": "7c823e97fc7ff83b9fa85364a0f69c90a506e6a964f6e8747e076d15ca3624fc"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/8_green_2.2x.png",
+        "sha256": "012e4f8e2ba28ffc849299136bb89ea84261815c34a62732743fb511e0fd0077"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/8_green_2.5x.png",
+        "sha256": "2ebfa917791ca4dd48ecfe2b22ab8088768f8176688e3936047417b4d86e2f4e"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/8_red_2.2x.png",
+        "sha256": "e4ecb4964b7946c2f2365d601cc3a63a00231667df125dcbd60b7ff14bef7d8c"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/8_red_2.5x.png",
+        "sha256": "e3217d43b81c8153a68528e2000e1ec3bdad276e97c1fcb71a5b740bdd4268d8"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/8_white_2.2x.png",
+        "sha256": "7705fe7aaa97f5e25eb518cab08db52f3a5d029dcfed71f6c105e9f7e737a592"
+      },
+      {
+        "path": "L12_cross5_8/2_3/MOA/8_white_2.5x.png",
+        "sha256": "b6aaeb02387afdbdbf14b2ab418a8ecc2d95c606f56012d871cb2a96aea9891a"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/5_black_2.2x.png",
+        "sha256": "fd2766a56e93af136dfe70731854927dcd483bb8d1e3c8fef2c4a652a3ff7fdd"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/5_black_2.5x.png",
+        "sha256": "616013c09898feddabc40aefc98f00a44ee739244b781b672d2f0bbd20f18df9"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/5_green_2.2x.png",
+        "sha256": "9e9caf6e3790bcfaa892684c4345d6cba96baa172d985da6b295a1d5ca3343bb"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/5_green_2.5x.png",
+        "sha256": "ea6a307194ec78400141560362ef0d8917e4c6af4c2823cfd6d44f7d1a8f6b25"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/5_red_2.2x.png",
+        "sha256": "f5fb92825682d86fbbfc9a4ad224a51ecc654f3b11ee6048f6d339ae3d5e2a6e"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/5_red_2.5x.png",
+        "sha256": "fe777f3b6d0d920b291ea8f6c0f01ed59046e6bb53f52921988088c8bb9ef75e"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/5_white_2.2x.png",
+        "sha256": "b2075b6671d034c886a6d24c17cf798d68686fec168bec5ffcd055c50ebee616"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/5_white_2.5x.png",
+        "sha256": "0f70a3ae5e2a79518bab57bce371ea1f1aa7ead90c9be1e67eeca734e33bfc2a"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/6_black_2.2x.png",
+        "sha256": "c570fd2656b292dd2f0b6d5ad1c76a6cbedc5d9f1baf894929ca960003303985"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/6_black_2.5x.png",
+        "sha256": "dc09791ab5e0d8a72383d34ff43994f9c55f925bec442aed36cf0aac0e039d94"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/6_green_2.2x.png",
+        "sha256": "190a246d8edd18eb2fe48cc8a96b541e2c6b3d3cf1d3e22a09cdde2be286960c"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/6_green_2.5x.png",
+        "sha256": "d8a211a1d98660451547ecf153084609b3128419cebe6bff8d2bafa635e4c558"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/6_red_2.2x.png",
+        "sha256": "fc85ac042e82004f71ef3d2ef977aa7acedafd470dd3eb69bfdca3f3dc8be929"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/6_red_2.5x.png",
+        "sha256": "991b4a7c47d64291596a0aae251af2f5a86c37596b6453416c62f129e1cad19c"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/6_white_2.2x.png",
+        "sha256": "56d7594b297f9b4a18f5f7d3c9a52add168d1045b80847b771897c76b86196d7"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/6_white_2.5x.png",
+        "sha256": "5277c56936cea5833587b40902944161cb635a1c74004887c0028ab79f873b76"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/7_black_2.2x.png",
+        "sha256": "76d9382b6337a6d8b2e4844562da773eaa1ba4b1daf193d91f7e04f7822d10da"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/7_black_2.5x.png",
+        "sha256": "faab7030184eada10db335476b431c1145cd2fc08073ac3208066ce9667d7fb7"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/7_green_2.2x.png",
+        "sha256": "be1bed829ec8105b479e7e866247535eefc6891a5b768fb7c239c1d38dd35119"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/7_green_2.5x.png",
+        "sha256": "dc654a20f932b8da36146b87dfb67a325c2eb8677f37a0b36df0942d6ab3eb76"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/7_red_2.2x.png",
+        "sha256": "e53405cdccbbab42c325668b3d9d3ed272eb2104face84c16a2f7097c8a5608b"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/7_red_2.5x.png",
+        "sha256": "d30e5d49c94a856d56788839d1ea2d51a0bc50323bb78defad75e74531ebcf04"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/7_white_2.2x.png",
+        "sha256": "fd0bb4a6284b97e5382e4763766c92d8b86c33b549eb5c655b9141ef08dc86aa"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/7_white_2.5x.png",
+        "sha256": "620db633d80d7310eceb6a2118ff6f781f250b0d92d1776eb7f8b20dc00a2b8b"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/8_black_2.2x.png",
+        "sha256": "fdf8495ca623a315a4fb4b5de19367cf3079416744cedcab8b7c907f15886157"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/8_black_2.5x.png",
+        "sha256": "4a7a0571b4e93dfe60ac6e309a309658b39d78d9e0668e1eedc7cfaede86e001"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/8_green_2.2x.png",
+        "sha256": "4c63f38b5bf6a88e7d646ec360b5d52dbcc51a08c50f4014cffdad5429c7db4e"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/8_green_2.5x.png",
+        "sha256": "2b1dd4124739c7cb28997831b80c668dbd466468bfe75a3b689023c43fe4427f"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/8_red_2.2x.png",
+        "sha256": "8898a34fad42a8cbc3be096be1370b7f6b59210f355846d1a58effab0265ad74"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/8_red_2.5x.png",
+        "sha256": "09a0ff6643669be485e9acb79d398590deedc0a42e7542b0c0459e3370abe1f8"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/8_white_2.2x.png",
+        "sha256": "aa6061324f5f12575212a96d8a7770cb77d54ae018f34d80f3640ae4f479d354"
+      },
+      {
+        "path": "L12_cross5_8/2_3/mil/8_white_2.5x.png",
+        "sha256": "ad18bc8398f37f7a039244c75f121af85d2cab8c068a08200f2cb76f7399ca2d"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/5_black_3.5x.png",
+        "sha256": "b1c5fe5ac8fe987fb77c4123de33b1235bfce96afb3ac879fe1c5623460ae2cc"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/5_black_4.0x.png",
+        "sha256": "f61ad24c0b1c007e08280f1d2d05181c3ce85d736c7416b004f50397bee5f67e"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/5_black_5.0x.png",
+        "sha256": "01f9fe593436170a64e020a12f9b2fc2858920a793333f6d4f28a45c40aa848f"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/5_black_6.5x.png",
+        "sha256": "19a16db9bdde74c3be5df7bc612cf4b59b564a271f2cfc3103fae8377b6fc09d"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/5_black_8.0x.png",
+        "sha256": "09dce622fcce25f3573164acbd8c8393f9a7eb9b669322cc32052c1a9212becb"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/5_green_3.5x.png",
+        "sha256": "1eb325d493b44ace22884d9ae3fee726de387ee86b25111cbabd23d6dbf11db4"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/5_green_4.0x.png",
+        "sha256": "2451678fd95f17aa7cbccf3fe8072654245a46e32e424c75e3cf0085e438f123"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/5_green_5.0x.png",
+        "sha256": "3a69cf4827135dc1b799c16b4a77077fd5e668f31f6a95e6b761999756e63783"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/5_green_6.5x.png",
+        "sha256": "5f831bd56743cb052eda35857bc7a1d9d3aa54bdbf440d4aa73175f5281c3876"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/5_green_8.0x.png",
+        "sha256": "f4469acc116c7212919aec25d9eaeaefcb2af6563c769a4f77fc596c3c7fda41"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/5_red_3.5x.png",
+        "sha256": "54227a015ac389b831786e4c71ace1eccf890d0d639f19d4577fede4f46be141"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/5_red_4.0x.png",
+        "sha256": "716521ead774585496e92ca551f38061b03a1add31f544fb3aefe4c23d0cf958"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/5_red_5.0x.png",
+        "sha256": "5992cd8528ab745dfab4d16355bf3d64e54055b6eabddd333ce94c3586f542e8"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/5_red_6.5x.png",
+        "sha256": "e2981835d95f3950c818771adbe50fee75f36c8629248581d14646b8be2008ce"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/5_red_8.0x.png",
+        "sha256": "0e253da81eaa985c7bff379ec2e8f9cf6f8a62dc9678a85ddc7c1d9022a01f37"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/5_white_3.5x.png",
+        "sha256": "85e2effd2d4149e0dfc461bac834e936a0a35b2fe20928a06af386066108fc91"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/5_white_4.0x.png",
+        "sha256": "14564529bc34c67ab33abf74e960b64d90a3103d2e76754c5d2e1a24aedea414"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/5_white_5.0x.png",
+        "sha256": "c3cb24cc6e4ffa57f554fb2347425a6e8ef39262aa7e8f8562097827754f3dea"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/5_white_6.5x.png",
+        "sha256": "e791b063b6f5b6b1b588d7466ad75cf9b208f02e4f5208d8729008ce21acc58a"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/5_white_8.0x.png",
+        "sha256": "0577228db553f1619c712e3eb357076d092340de3ece7fc4cf52f9ddd4efda23"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/6_black_3.5x.png",
+        "sha256": "a1ab6615db1a80efb00ee7c0ea53d4c77b00e9bb583c958f47180da02b688950"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/6_black_4.0x.png",
+        "sha256": "f15c025adedc142d30531ededf9c8594840daeffb76613f98bb5100a653f8b29"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/6_black_5.0x.png",
+        "sha256": "7b96ec66e4a9a7abda856ad62f0ac2a7aed4c9ba9572b126d4e411deb73b57eb"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/6_black_6.5x.png",
+        "sha256": "51e911ce5f76814464af44325aa6cff6f6c4d864503aa85b18c9f20d484b554d"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/6_black_8.0x.png",
+        "sha256": "267d0c7a403d975f74cbf5669f8a571757b30100360e83668a79dfa3d439aa0f"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/6_green_3.5x.png",
+        "sha256": "3785d951c2902467a477aa1b3770a7e5de000559ab9e614002b4cc9b81ec084a"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/6_green_4.0x.png",
+        "sha256": "c525ec7dcbd32c5151961b7856b461a50f603b28d5af73fca5b14360d43efb98"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/6_green_5.0x.png",
+        "sha256": "f6d450342e8f251e8fe4f5f379a10889a33de5ad5eaa5476068829f1d62532ec"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/6_green_6.5x.png",
+        "sha256": "b997c7117f26db851ad78105a1bd51e76fcbfeeff79a0f0fc9ed9828000c22e3"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/6_green_8.0x.png",
+        "sha256": "484657de49b5687226cb64253100fa7fb2196712909928cd3fc22bd27b6b6236"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/6_red_3.5x.png",
+        "sha256": "aa4eb4fbfc85f4e68af226b19e5f6430aae708245466abb53a0a58b36384566c"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/6_red_4.0x.png",
+        "sha256": "448620222b34b2de3d810183ebfe43c2bb49d4f893a2d1e337313365f2a73929"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/6_red_5.0x.png",
+        "sha256": "a5c59764a393676703464229cb46146eb7a7024dd8fb818368376398255e0d53"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/6_red_6.5x.png",
+        "sha256": "3eb8099ea58d39fd40ce203a2de06f91091513e7d917d3dddb6fe52776b92eee"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/6_red_8.0x.png",
+        "sha256": "51b32933d033ee483be5cd01ef15d048aff51408b09310acc166c3b57094b14b"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/6_white_3.5x.png",
+        "sha256": "392368c148d3735f03489e69c4de223fd1d382fc4b2b9b09602aff17337bb114"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/6_white_4.0x.png",
+        "sha256": "fbdf0511ae0748dcdae0209ebe33e169aea376c89049e81a2f3da26dc7908450"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/6_white_5.0x.png",
+        "sha256": "6079ec51961bbcbf35530cfe48f3a8f62d64e1e271911527d402d85f2b30a5ce"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/6_white_6.5x.png",
+        "sha256": "98f1b7f7fbf36fb09c2b30ed0ef3d18791718734bc859ff7e4d2f4b699b7df7a"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/6_white_8.0x.png",
+        "sha256": "ebb4d9d8b20bc379a03b3cc976b3299c25ef07cee1791289d60500455a353448"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/7_black_3.5x.png",
+        "sha256": "f5bed5c3a6ed43d51496a1102ee6a8c042bac35a2222713d7424e037123ca6b0"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/7_black_4.0x.png",
+        "sha256": "a010daf3dad6c1e9ffc87474d2a28708d5f47870770aed5fd34d29586d18240f"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/7_black_5.0x.png",
+        "sha256": "db2404dcccfedb1809f388b699b1cadd020a3450c029131d1de5f2e98ecb844f"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/7_black_6.5x.png",
+        "sha256": "32fb9ee6fd9ae73a039defca9a9d4dbc71323bfcfc89eedc8dd289364859446b"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/7_black_8.0x.png",
+        "sha256": "5b2f8d8fe0330f3ce7b7c334140b14cacfeb76cc107ef169a2ec68ff170aacbd"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/7_green_3.5x.png",
+        "sha256": "8a2c984cef25d16eb7bc89849b249d1dbdde66fadc805be8c7e0a632f99b569e"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/7_green_4.0x.png",
+        "sha256": "8f23ca2e67ebe509cbf4c018586470f0ea8031f9b47f32d5fbdae0d78e3fbf98"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/7_green_5.0x.png",
+        "sha256": "cd1478a6a0fabc7e09749015e9909940aff425a028d583352f7dbb9e276923a6"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/7_green_6.5x.png",
+        "sha256": "b3196a0893c137d3553fe640e324fe21a6977d853b8386495af475d9eb27232c"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/7_green_8.0x.png",
+        "sha256": "b83aa2d85f30fe09a813eb7e8ba98341118ecffd039178c3a0f262f17559b5a0"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/7_red_3.5x.png",
+        "sha256": "ba2073b2563282824c2d5a2ae968a9275fcecb9f8e2fe2c49e8794303aec1356"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/7_red_4.0x.png",
+        "sha256": "cbd897705349c80621f68d8850a4df0469f9ce4a8c682f91a9fd93a1e3db401c"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/7_red_5.0x.png",
+        "sha256": "bb35828933b72b9e086e68d846d5f94016e9c74e0d0a961fb92a3ee3915ed3e8"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/7_red_6.5x.png",
+        "sha256": "e0116e9f104d9c224d1e8b0c49adc40fb88df14c26fe7d4952f67265e7e796c2"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/7_red_8.0x.png",
+        "sha256": "383c34f0068ae28a15921646c720d716704db793e05ea307557ebd919924d1d4"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/7_white_3.5x.png",
+        "sha256": "4ca9bd531a8499dcd670e6b3f58cccdd018f392ef0897f0d5c3737b824860afa"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/7_white_4.0x.png",
+        "sha256": "74f95cb6034ed1e28b91a8c9d0a10e22caab0f6d4d88846ae498fe451b7ae607"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/7_white_5.0x.png",
+        "sha256": "bdedf50a09f50b8795ced320846820bf71035b397d29b56e40420320e0a8c641"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/7_white_6.5x.png",
+        "sha256": "f12af899845093aeca1d5c203ed88ac7340b8bb398c419f2b86bbc1d75059952"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/7_white_8.0x.png",
+        "sha256": "c7818912d4e7121f074e536c6793361deddee34a963d3e745726960b420d9ded"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/8_black_3.5x.png",
+        "sha256": "6374656a6b358a60cf9e3cf81df38e4e8bb34bcc48b43e487b1e92844a7f94f6"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/8_black_4.0x.png",
+        "sha256": "33932c4d8a70cb48e189c2b450089bcd3652f280b1b0a46876482395513041a4"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/8_black_5.0x.png",
+        "sha256": "654d410297089c6a5288af1fb6f38121a24de13cb7341a43c4359453555dbee9"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/8_black_6.5x.png",
+        "sha256": "b99a5ab87c5f2df3afb490b8126ce795c4ccdd2906f55d18359c5d90ba02ddd7"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/8_black_8.0x.png",
+        "sha256": "d3037b7384d7df8010f3080cdbfcd9c1829ca5f86504c68b67031ac8f8d476ef"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/8_green_3.5x.png",
+        "sha256": "f97221d0d9409915b61b194f711c478e885e6fd8b6fb3038bf807ae42a5c422f"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/8_green_4.0x.png",
+        "sha256": "8faac45952880e8dc530766291d91788a266cd49f2d482994bc698d6adc28b0e"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/8_green_5.0x.png",
+        "sha256": "f4f624ab97e4cfcdfa7488060f0f64b444cef164f988786c52181eb1915f9754"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/8_green_6.5x.png",
+        "sha256": "0b59cb6f6a764bae4a9716f7022bfd1d65a77270dfd5c2f9db839618343f6dd1"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/8_green_8.0x.png",
+        "sha256": "4fdd4bae54d4d032ef0b25269d3c814ea12d62c8c65236cf1bf043d580282b66"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/8_red_3.5x.png",
+        "sha256": "2bc9c04964dad30146724e2a5957bea83b466f3f907925d31407e5f17016b218"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/8_red_4.0x.png",
+        "sha256": "1e64fed20809090e77451e6abcb9f3697fbdaa607866116de4443228790b78d2"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/8_red_5.0x.png",
+        "sha256": "3fef9a0cd105cde060e80551ec299ec29cf4c9d6e7a2da1f3f9c120aca96fa98"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/8_red_6.5x.png",
+        "sha256": "65e563171a711c5cd5b3ea8f99b7eb215140fba3002fd6fa19efb25795da429e"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/8_red_8.0x.png",
+        "sha256": "ba8d2c9639e8fd2abcb04f14c19c04d3abf42a34b8d7e90f579f7eb158d7e599"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/8_white_3.5x.png",
+        "sha256": "ceb6eaffceacdaf2e932a5cb765dbc173e76ae7a1e6b267d8d14d70413479803"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/8_white_4.0x.png",
+        "sha256": "d570df489f53e31f93ee71022db6624ed14d6798c2a5b959f46cf41a50e2a300"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/8_white_5.0x.png",
+        "sha256": "c5b3de2ffd755d2ebf1cb2a735a74bb288794b529e68995cae9e8cf0c4069d4c"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/8_white_6.5x.png",
+        "sha256": "60a69ee8403b84b479ce6d7b0412247c61bd2004783c811e4e72a5dbd345b89b"
+      },
+      {
+        "path": "L12_cross5_8/3_4/MOA/8_white_8.0x.png",
+        "sha256": "ff9a6aedd115c9d7b25be0cfe553b7639be82d74dbacfe22ec587bfaed8bda15"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/5_black_3.5x.png",
+        "sha256": "fcbe1734a50fd5878cd535810187d70a33b59a2fdcecd208ac5572d92785ac29"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/5_black_4.0x.png",
+        "sha256": "c964abd1ef4703bf121b30b88852debb44390e601ce31f7f8ff36a1009dfb87f"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/5_black_5.0x.png",
+        "sha256": "cf541f0b9083978c9784209e2b96994ed8686c0d5874d32973f2eb06df10d725"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/5_black_6.5x.png",
+        "sha256": "0d0a015a5449ee73d23a0aac90b10a03eb98fb7d1bcc6c6bb2ab9821795b6f18"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/5_black_8.0x.png",
+        "sha256": "5f278d030f583887e7d3870c25ded903dbe24c8dbd61aecc9d21639563449715"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/5_green_3.5x.png",
+        "sha256": "e532927a7b1b0771db7a18c827730915d5fd0ac09fe2beebc8dba97a2f8d1570"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/5_green_4.0x.png",
+        "sha256": "8d5538f455828d9afb3cc2027004c142cdbbc247dec6fc143711ab65c15ff673"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/5_green_5.0x.png",
+        "sha256": "09d97560cd73dd21b4c65b7c46c37706fe27da7e6bb441a344396f45fbb68df2"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/5_green_6.5x.png",
+        "sha256": "52eb0ca268b789df39a1ba7163cd503de88bd3826388c81fb5ded2d65dda3b4b"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/5_green_8.0x.png",
+        "sha256": "a9a97a73bc1337b20af78fe66d2cd30557b8e4712ecd8a13f6e24bfe2d41cf14"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/5_red_3.5x.png",
+        "sha256": "26e66a38d029406c4f000acefaaf41d5cbc512a6a8cf1a9fb72bd550dc8ebc14"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/5_red_4.0x.png",
+        "sha256": "e087ff908cf3abdb09606ff80e25c4ca1e5914d8cc2dacd6bc2af2e7761264aa"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/5_red_5.0x.png",
+        "sha256": "b9bccbbed38459e0433c393847583b36ee7b70908522e8f90f08445ab1e0ef70"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/5_red_6.5x.png",
+        "sha256": "4e921644b9b02cd0928171488872afba4bb59f2af7559ff2484aaa177e927360"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/5_red_8.0x.png",
+        "sha256": "bb8e25c3ad94b326f689d4d539ad9a46f186029f826fc707b0ddea86d8ea0bf7"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/5_white_3.5x.png",
+        "sha256": "7c6c0bdc1d4c9dc390334b5414b3c178270488f8855bd836c35ebceaeaec7662"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/5_white_4.0x.png",
+        "sha256": "5b6f33e9e91acfc8aaeacb5c4def2b0524af4608a2cd9f452753781fd595cdd9"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/5_white_5.0x.png",
+        "sha256": "c48aa7d15cae7dcfb96c6d08e70fc2530484d313fe8e6d9c07d2630b43139db1"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/5_white_6.5x.png",
+        "sha256": "b6c7f28d596b174d0b31e49281a6ed411ebac9c511738d8b877c05889a756053"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/5_white_8.0x.png",
+        "sha256": "0f8856a58c15740bdf95226837485d56e504cb538add5cfa3f8144aa6f6ee249"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/6_black_3.5x.png",
+        "sha256": "0d2964bf552f7d2d88af68eba2b4c71975489e31e5b7498efb200509641fa207"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/6_black_4.0x.png",
+        "sha256": "732f834b8d8e43136b81ba633b1274359f6ed2fe0b85a77831727bcd2ed0f59a"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/6_black_5.0x.png",
+        "sha256": "a296e321a43f8eca185af73cba46454e6cde699bc34e15bc0945dbdbd3eeec3b"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/6_black_6.5x.png",
+        "sha256": "400cc4940803e75d918b4df6897c41c58578d516fe9b45862c4d61b4b4e89f30"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/6_black_8.0x.png",
+        "sha256": "24d8cad51638f6e9da56073a1963e116db192ccc3927722b9cebdb05da47d55a"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/6_green_3.5x.png",
+        "sha256": "5dcb563ade218a58f9cf6f64dda9ce3787fad785921d83748f4f5f196426c6d2"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/6_green_4.0x.png",
+        "sha256": "3c16fb6ae49005600d90b4561be22643e653c0a7ecb2b83f37b408eaf5d60fa6"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/6_green_5.0x.png",
+        "sha256": "7bd983c0c0b5263c737adf860742cf1c5d8789ffc3e3c9a39afc1dabfb85e4a6"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/6_green_6.5x.png",
+        "sha256": "a27fcbdb68135de6118f1004200bb45ec747869682b2f4095c5463842c76748d"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/6_green_8.0x.png",
+        "sha256": "38fc8a657217a70523bd2e141accdde2e94efb8f973d97751d5e56f4f2151349"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/6_red_3.5x.png",
+        "sha256": "11332056d0eab0f92b591cddaad0a46747de25e351e920719b7b6c776f5ec277"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/6_red_4.0x.png",
+        "sha256": "59ea52f074c4256f85f8cdd1f7ec82ef7251e69044b8716992d4af2a1492d249"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/6_red_5.0x.png",
+        "sha256": "8e64dd33ab00f2391aadf6c01b69ca7303632a299b982351500daedff5633f37"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/6_red_6.5x.png",
+        "sha256": "6d81b6d3d2cf1df02701ca1860cab4277804488b1049e7166e34e270a68285ae"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/6_red_8.0x.png",
+        "sha256": "4fdfac2a5e296d3f22af9e55b2bb7230fc79541812540559ee8b82b824eacead"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/6_white_3.5x.png",
+        "sha256": "76f62d14c41e0a69988b664aebda8d4d45660ddacd4db4733e9bc0ce4c8c23a6"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/6_white_4.0x.png",
+        "sha256": "fb1806d9ea717adecf55ae288c3a804ad546dd9f7137f1816de016e9756701b8"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/6_white_5.0x.png",
+        "sha256": "7a7d7e4943be9a24b572678859b146d2b78ce266490d1402d6e47b440eae5567"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/6_white_6.5x.png",
+        "sha256": "6d4a7220250c6cc143c0e5d851618972ac95ba10573e10f85142174d3ff03f11"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/6_white_8.0x.png",
+        "sha256": "328700fd2ba26bfcbc78617f38b13cdb94ec39e88b6933019f961ebd21ae093b"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/7_black_3.5x.png",
+        "sha256": "b320afd4d9510e137c3dadaf0a16107a02e10481f5dbdc3124c090fb09c65a6b"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/7_black_4.0x.png",
+        "sha256": "a2eb1c0678464eb16db7bc6fb662a26986a5a6fef5f379b5cab1a9c016998787"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/7_black_5.0x.png",
+        "sha256": "cf49086db1dc67011016b054a021a41e0c50166d383b83a0a73764a20fbd8d70"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/7_black_6.5x.png",
+        "sha256": "e0fe6018c43d69c5c8241c89985b76830d93c42ec264e0cfdc55fbe163ca4984"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/7_black_8.0x.png",
+        "sha256": "7ce8b20efb6a7ec047f5dd8cec46f606d0aea4b4084c196e77e94a7982d14849"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/7_green_3.5x.png",
+        "sha256": "3eab0a54400e37c53814fd556699de45ee3b91659c6fb0f4ae1b7b412736ad4a"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/7_green_4.0x.png",
+        "sha256": "870bb07e81f8d93a5a1083cb58fa5c4dd28336427938513f14695def9e95079d"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/7_green_5.0x.png",
+        "sha256": "3902927c8d2b2bb2e77c350a1d50ca3e420e2bd9bdddf9c3c4461f9ac01b4f65"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/7_green_6.5x.png",
+        "sha256": "c9b4dc16663584f6e87e2575df1f60817cb5590c6f9a6b86413781c18fe64032"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/7_green_8.0x.png",
+        "sha256": "1248b179d5f7675e8a324128e0f9f9279f57ba1ff8359e7b31f435da5a13e0cc"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/7_red_3.5x.png",
+        "sha256": "6d80694179513c2bfc25590954c9ca0d2389d7a7bab754184d31185e00d72a31"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/7_red_4.0x.png",
+        "sha256": "7985f16826c93ae2398267241b3a86cafe1ea8c024c0a382a442d8e218cd67f3"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/7_red_5.0x.png",
+        "sha256": "eaa01f3d846e15b8675040279c8c15852034918bbd15cfb68b5d2ca483fe3882"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/7_red_6.5x.png",
+        "sha256": "3d97dbb7e8c4d93ab9f6a0e2f10a3f32eaa6e7cea8ff87a0e9aa5fbea8bdcbf0"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/7_red_8.0x.png",
+        "sha256": "08a40e20d34a1d72978cab5a28d27dcebef08e086816309848f03b354e3ae2d2"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/7_white_3.5x.png",
+        "sha256": "ea9f0a58c976ac304d20d5dc4c19e3180f5cb5466235023fc3e1d9e7ec268cc5"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/7_white_4.0x.png",
+        "sha256": "e096d050974c39d087997f7b7734accaac277450a710d69ae1819c0584781c49"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/7_white_5.0x.png",
+        "sha256": "6b797ca8aa986ee3e7eb80232a80f6ec1c1e3a9834084ba07b9b50050ed879ed"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/7_white_6.5x.png",
+        "sha256": "d811bcd241e59d7dac3b2217537e3abad4c26b0d3847711476609e88a2a77847"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/7_white_8.0x.png",
+        "sha256": "fcd31c9ff03585d64834f7ef3824729b47c8f39dc41415fd80a3fb354ebb805b"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/8_black_3.5x.png",
+        "sha256": "f71e24ae7c31a53d76461e4aba4be2ad598967dcb4ec1a9d751deebd9c1dd37d"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/8_black_4.0x.png",
+        "sha256": "5bb5b939430d410dbab365446b3b27e3c9889d913013ec7718500164ec742f3f"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/8_black_5.0x.png",
+        "sha256": "cf242828aa2a973a446e955b2b5f567fb3493a65f941a36cb7e596d17e991ae5"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/8_black_6.5x.png",
+        "sha256": "2eab6cf1ce2facdbc5af771de037993a7b8e6648bcc0cfd62f400423720465f8"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/8_black_8.0x.png",
+        "sha256": "9e5cf761a79715a57e93d111c6af0c96d9bb66f789394081bc7440d64b0dbfee"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/8_green_3.5x.png",
+        "sha256": "2f9925dc29f031a8528a399dea2e3f1e8991e85b041c7659925bb78cedc49cf7"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/8_green_4.0x.png",
+        "sha256": "e3dfd967644f68810168dc2fa2278a1fd06fb71878b26b3186ec16edebd232cc"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/8_green_5.0x.png",
+        "sha256": "b2822a9827ad26f517a229a38306ddad1b078023ff097d70051518a1b6c45992"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/8_green_6.5x.png",
+        "sha256": "396bd1188720999427b890ea9f590f2a11bddab63840bfec402540a961cc00e4"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/8_green_8.0x.png",
+        "sha256": "6506f579a3182f9e9190a7959cb665142fbeee7b3ee8662d686b42f0d212dc81"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/8_red_3.5x.png",
+        "sha256": "0473e01acb3c5ba39db9548b47f0fc10e2a019de9e4a0357dc32c0e2ef197ead"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/8_red_4.0x.png",
+        "sha256": "81ffb83ff8ecfb5049cfc70e04de26118090136d95bb1c4d24a68463b782dfed"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/8_red_5.0x.png",
+        "sha256": "5f7fb0340313324ebc8d342bf61b0d0c967efd3982c40f86f084eca4f35ea914"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/8_red_6.5x.png",
+        "sha256": "6cbe5d8de15fcc378fa3dc1fba4eadf7f47f0a6be2dac867a9c074cb626d664c"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/8_red_8.0x.png",
+        "sha256": "7d213c3efa427d9252a6be10f86231b3617e451734e4467238301f6ae6a0eeff"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/8_white_3.5x.png",
+        "sha256": "668c72c173ea4af21d6c0f75bd9737cdcdbc91a00c64e69c860dfb6160f80fd3"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/8_white_4.0x.png",
+        "sha256": "484392f25406c49d7947b6126da94ffefa6f6109c02612c4e062cbbd4852b83f"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/8_white_5.0x.png",
+        "sha256": "0fc0d0666cb80f19a00ac0bba7a8e659a6a0df44a5f4ff1eb7aa95016914aadb"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/8_white_6.5x.png",
+        "sha256": "05466ad79c5fac16c383970e0214a5ed091aa5d3733ad4e4794c984cc31a85ce"
+      },
+      {
+        "path": "L12_cross5_8/3_4/mil/8_white_8.0x.png",
+        "sha256": "3b8b5ec4fb3792e7fea84d87fd6b094131dfdd33ee386454c66658f6ef8748cc"
+      },
+      {
+        "path": "crossx1/1_black_1x.png",
+        "sha256": "87807d17adb1b61d17cd36c925537c6068ee625598fa44f76281648d3b00786e"
+      },
+      {
+        "path": "crossx1/1_green_1x.png",
+        "sha256": "dc503f7c2bee442719c9cbc70f5ed22227fde45596fd09adc0c2b4955c2762a3"
+      },
+      {
+        "path": "crossx1/1_red_1x.png",
+        "sha256": "30c00f42aaf1a4e79ac2d919534d6fcc5c199aa0aa1f5942439c0879f2ae252d"
+      },
+      {
+        "path": "crossx1/1_white_1x.png",
+        "sha256": "782ca78c33e0f41a82942789eed8a295ec3920de3e670d9e08f86dbb1e2907eb"
+      },
+      {
+        "path": "crossx1/2_black_1x.png",
+        "sha256": "9614218707b0ffa5560ed55ed6d1dff7dc0202bd1aeee80153a5676596418249"
+      },
+      {
+        "path": "crossx1/2_green_1x.png",
+        "sha256": "e181a8f861567965d97bfcaa61f84112b6f9f2b3945c0039f14f309d98b84a56"
+      },
+      {
+        "path": "crossx1/2_red_1x.png",
+        "sha256": "6470f10d94177aa5884c714696e5681518c71dd3dcaba4ff6fae3e5a4af42f00"
+      },
+      {
+        "path": "crossx1/2_white_1x.png",
+        "sha256": "91c67d1f831ed047c289fb281d5989ad12ac94c2c47f10d3e6841dead7168534"
+      },
+      {
+        "path": "crossx1/3_black_1x.png",
+        "sha256": "ac4b872d56549dba108c0ac9861fc19feb18a5b761ca3d5b5b94c04d5ec820d4"
+      },
+      {
+        "path": "crossx1/3_green_1x.png",
+        "sha256": "fd6b3b9311b2bd39cd65d39dac2f1cf1d6147f7403945de76e5baa01c32ee767"
+      },
+      {
+        "path": "crossx1/3_red_1x.png",
+        "sha256": "817bae65706856e61e360b03dc19002338dd3dec989439813e09569dc9c6534f"
+      },
+      {
+        "path": "crossx1/3_white_1x.png",
+        "sha256": "3dfe5eccfef8353d16beb38311a70166a6fde43b9f676a32fce04bf97d2c9d50"
+      },
+      {
+        "path": "crossx1/4_black_1x.png",
+        "sha256": "2d9d04461e80de98f86a14d0ce0a889ed6c85638a777a4efb48b610156b64693"
+      },
+      {
+        "path": "crossx1/4_green_1x.png",
+        "sha256": "77e06dcb009994deea15092066cab9a5f4897f1c794b6cb79df3d338eefd952e"
+      },
+      {
+        "path": "crossx1/4_red_1x.png",
+        "sha256": "7e179cb665b6c0a7a65a319e1845d68a62fdd53625953846e0e0c211020b1048"
+      },
+      {
+        "path": "crossx1/4_white_1x.png",
+        "sha256": "2f88ae71a6e2c02bc6d50daad567c10429fbd340f72c72679ca784a8c292ff2b"
+      }
+    ]
+  },
+  "changes": [
+    {
+      "date": "2026-11-14",
+      "description": "Initial public gallery: independently sourced stock reticles and clearly labeled authored/configurable variants; native files, crop previews and source hashes retained."
+    }
+  ]
+}

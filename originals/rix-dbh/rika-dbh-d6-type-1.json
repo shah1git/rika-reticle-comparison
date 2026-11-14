@@ -1,0 +1,153 @@
+{
+  "model": "RIX DBH D6",
+  "type": 1,
+  "source_ui_sha256": "1ccd21a3a4bfb94c11e4652baa138712e41c806d169802de82a4a575acebf3aa",
+  "source_elf_sha256": "356c19d035cee594f932eddf697da767fcd7a0ac3bb5e2753a01543db75591b8",
+  "zoom": 1,
+  "method": "Decoded AWTK reticle widget subtree; original ARM64 on_RX_All_Reticle_zoom and its stock callbacks executed in Unicorn until the separate range-marker path. Widget geometry/style calls captured. Parent visibility ignored to show the selected type. Color normalized to white by gallery renderer. No firmware startup or hardware code.",
+  "widget": {
+    "type": "view",
+    "rect": [
+      0,
+      0,
+      1680,
+      1680
+    ],
+    "props": {
+      "name": "view_reticle_shoot1",
+      "visible": "true",
+      "style:normal:border_width": "0",
+      "floating": "false",
+      "opacity": "255"
+    },
+    "children": [
+      {
+        "type": "view",
+        "rect": [
+          720,
+          839,
+          100,
+          2
+        ],
+        "props": {
+          "name": "view_reticle_w_1",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          830,
+          839,
+          20,
+          2
+        ],
+        "props": {
+          "name": "view_reticle_w_2",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          860,
+          839,
+          100,
+          2
+        ],
+        "props": {
+          "name": "view_reticle_w_3",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          839,
+          840,
+          2,
+          10
+        ],
+        "props": {
+          "name": "view_reticle_h_2",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          839,
+          860,
+          2,
+          100
+        ],
+        "props": {
+          "name": "view_reticle_h_3",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      }
+    ]
+  },
+  "trace": [
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle_w_1",
+      "values": [
+        720,
+        839,
+        100,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle_w_2",
+      "values": [
+        830,
+        839,
+        20,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle_w_3",
+      "values": [
+        860,
+        839,
+        100,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle_h_2",
+      "values": [
+        839,
+        840,
+        2,
+        10
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle_h_3",
+      "values": [
+        839,
+        860,
+        2,
+        100
+      ]
+    }
+  ]
+}

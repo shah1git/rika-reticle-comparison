@@ -1,0 +1,99 @@
+{
+  "model": "RIX DBH D12",
+  "type": 6,
+  "source_ui_sha256": "eb568e1c238a120911cd3b23456200a6658d3aff2f3c7680e6a188ae1a8d4706",
+  "source_elf_sha256": "d59b48c5c90f76f63f81a387fae3ddc3aec35f6d37877dbb692af65cba8eb6ac",
+  "zoom": 1,
+  "method": "Decoded AWTK reticle widget subtree; original ARM64 on_RX_All_Reticle_zoom and its stock callbacks executed in Unicorn until the separate range-marker path. Widget geometry/style calls captured. Parent visibility ignored to show the selected type. Color normalized to white by gallery renderer. No firmware startup or hardware code.",
+  "widget": {
+    "type": "view",
+    "rect": [
+      0,
+      0,
+      1680,
+      1680
+    ],
+    "props": {
+      "name": "view_reticle_shoot8",
+      "style:normal:round_radius": "2",
+      "visible": "true"
+    },
+    "children": [
+      {
+        "type": "view",
+        "rect": [
+          827,
+          839,
+          6,
+          2
+        ],
+        "props": {
+          "name": "view_reticle8_w_1",
+          "style:normal:bg_color": "#000000",
+          "style:normal:round_radius": "1",
+          "style:normal:border_width": "0",
+          "style:normal:bg_image_draw_type": "center"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          839,
+          839,
+          2,
+          2
+        ],
+        "props": {
+          "name": "view_reticle8_w_2",
+          "style:normal:bg_color": "#000000",
+          "style:normal:round_radius": "1",
+          "style:normal:border_width": "0",
+          "style:normal:bg_image_draw_type": "center"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          847,
+          839,
+          6,
+          2
+        ],
+        "props": {
+          "name": "view_reticle8_w_3",
+          "style:normal:bg_color": "#000000",
+          "style:normal:round_radius": "1",
+          "style:normal:border_width": "0",
+          "style:normal:bg_image_draw_type": "center"
+        },
+        "children": []
+      }
+    ]
+  },
+  "trace": [
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle8_w_1",
+      "values": [
+        827,
+        839,
+        6,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle8_w_3",
+      "values": [
+        847,
+        839,
+        6,
+        2
+      ]
+    }
+  ]
+}

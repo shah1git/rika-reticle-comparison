@@ -1,0 +1,792 @@
+{
+  "model": "RIX DBH D6",
+  "type": 4,
+  "source_ui_sha256": "1ccd21a3a4bfb94c11e4652baa138712e41c806d169802de82a4a575acebf3aa",
+  "source_elf_sha256": "356c19d035cee594f932eddf697da767fcd7a0ac3bb5e2753a01543db75591b8",
+  "zoom": 1,
+  "method": "Decoded AWTK reticle widget subtree; original ARM64 on_RX_All_Reticle_zoom and its stock callbacks executed in Unicorn until the separate range-marker path. Widget geometry/style calls captured. Parent visibility ignored to show the selected type. Color normalized to white by gallery renderer. No firmware startup or hardware code.",
+  "widget": {
+    "type": "view",
+    "rect": [
+      0,
+      0,
+      1680,
+      1680
+    ],
+    "props": {
+      "name": "view_reticle_shoot2",
+      "visible": "true",
+      "style:normal:border_width": "0",
+      "floating": "false",
+      "opacity": "255"
+    },
+    "children": [
+      {
+        "type": "view",
+        "rect": [
+          730,
+          839,
+          100,
+          2
+        ],
+        "props": {
+          "name": "view_reticle2_w_1",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          740,
+          832,
+          2,
+          16
+        ],
+        "props": {
+          "name": "view_reticle2_w_2",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          750,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle2_w_3",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          760,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle2_w_4",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          770,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle2_w_5",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          780,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle2_w_6",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          790,
+          832,
+          2,
+          16
+        ],
+        "props": {
+          "name": "view_reticle2_w_7",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          800,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle2_w_8",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          810,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle2_w_9",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          820,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle2_w_10",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          850,
+          839,
+          100,
+          2
+        ],
+        "props": {
+          "name": "view_reticle2_w_11",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          860,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle2_w_12",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          870,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle2_w_13",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          880,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle2_w_14",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          890,
+          832,
+          2,
+          16
+        ],
+        "props": {
+          "name": "view_reticle2_w_15",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          900,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle2_w_16",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          910,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle2_w_17",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          920,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle2_w_18",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          930,
+          836,
+          2,
+          8
+        ],
+        "props": {
+          "name": "view_reticle2_w_19",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          940,
+          832,
+          2,
+          16
+        ],
+        "props": {
+          "name": "view_reticle2_w_20",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          839,
+          850,
+          2,
+          100
+        ],
+        "props": {
+          "name": "view_reticle2_h_1",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          836,
+          860,
+          8,
+          2
+        ],
+        "props": {
+          "name": "view_reticle2_h_2",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          836,
+          870,
+          8,
+          2
+        ],
+        "props": {
+          "name": "view_reticle2_h_3",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          836,
+          880,
+          8,
+          2
+        ],
+        "props": {
+          "name": "view_reticle2_h_4",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          832,
+          890,
+          16,
+          2
+        ],
+        "props": {
+          "name": "view_reticle2_h_5",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          836,
+          900,
+          8,
+          2
+        ],
+        "props": {
+          "name": "view_reticle2_h_6",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          836,
+          910,
+          8,
+          2
+        ],
+        "props": {
+          "name": "view_reticle2_h_7",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          836,
+          920,
+          8,
+          2
+        ],
+        "props": {
+          "name": "view_reticle2_h_8",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          836,
+          930,
+          8,
+          2
+        ],
+        "props": {
+          "name": "view_reticle2_h_9",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          832,
+          940,
+          16,
+          2
+        ],
+        "props": {
+          "name": "view_reticle2_h_10",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      },
+      {
+        "type": "view",
+        "rect": [
+          839,
+          839,
+          2,
+          2
+        ],
+        "props": {
+          "name": "view_reticle2_wh_1",
+          "style:normal:bg_color": "#000000"
+        },
+        "children": []
+      }
+    ]
+  },
+  "trace": [
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_w_1",
+      "values": [
+        730,
+        839,
+        100,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_w_2",
+      "values": [
+        740,
+        832,
+        2,
+        16
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_w_3",
+      "values": [
+        750,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_w_4",
+      "values": [
+        760,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_w_5",
+      "values": [
+        770,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_w_6",
+      "values": [
+        780,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_w_7",
+      "values": [
+        790,
+        832,
+        2,
+        16
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_w_8",
+      "values": [
+        800,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_w_9",
+      "values": [
+        810,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_w_10",
+      "values": [
+        820,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_w_11",
+      "values": [
+        850,
+        839,
+        100,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_w_12",
+      "values": [
+        860,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_w_13",
+      "values": [
+        870,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_w_14",
+      "values": [
+        880,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_w_15",
+      "values": [
+        890,
+        832,
+        2,
+        16
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_w_16",
+      "values": [
+        900,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_w_17",
+      "values": [
+        910,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_w_18",
+      "values": [
+        920,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_w_19",
+      "values": [
+        930,
+        836,
+        2,
+        8
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_w_20",
+      "values": [
+        940,
+        832,
+        2,
+        16
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_h_1",
+      "values": [
+        839,
+        850,
+        2,
+        100
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_h_2",
+      "values": [
+        836,
+        860,
+        8,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_h_3",
+      "values": [
+        836,
+        870,
+        8,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_h_4",
+      "values": [
+        836,
+        880,
+        8,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_h_5",
+      "values": [
+        832,
+        890,
+        16,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_h_6",
+      "values": [
+        836,
+        900,
+        8,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_h_7",
+      "values": [
+        836,
+        910,
+        8,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_h_8",
+      "values": [
+        836,
+        920,
+        8,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_h_9",
+      "values": [
+        836,
+        930,
+        8,
+        2
+      ]
+    },
+    {
+      "function": "on_RX_All_Reticle_zoom",
+      "call": "widget_move_resize",
+      "widget": "view_reticle2_h_10",
+      "values": [
+        832,
+        940,
+        16,
+        2
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "format": "rika-reticle-v1",
+  "id": "mark6",
+  "name": "Марка 6 (1A00500512)",
+  "anchor_px": {
+    "x": 0.5,
+    "y": 0.5
+  },
+  "source_sha256": "99ab32eb547eb1f21f3f4a3df7ea28e0e0f795047201d320caa291f37380f220",
+  "elements": [
+    {
+      "type": "line_px",
+      "x1": 0,
+      "y1": -1.0,
+      "x2": 0,
+      "y2": 1.0,
+      "w_px": 1
+    },
+    {
+      "type": "line_px",
+      "x1": -1.0,
+      "y1": 0,
+      "x2": 1.0,
+      "y2": 0,
+      "w_px": 1
+    }
+  ],
+  "geometry_source": "nominal sizes of the vendor graduation test case IR-RN-KM-20260904-02 (thread IR-107, column 理论 mil): ladders in whole mil, stroke half-lengths on the 0.25 mil grid. The vendor sprites and their extraction are a tolerance cross-check, not the source of a coordinate."
+}
